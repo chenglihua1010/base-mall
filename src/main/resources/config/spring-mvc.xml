@@ -8,17 +8,24 @@
     http://www.springframework.org/schema/context/spring-context-3.0.xsd
     http://www.springframework.org/schema/mvc
     http://www.springframework.org/schema/mvc/spring-mvc-4.3.xsd">
-    <!-- 启动注解驱动的spring MVC功能,注册请求url和注解POJO类方法的映射-->
-    <mvc:annotation-driven />
-    <!--静态文件-->
-    <mvc:default-servlet-handler/>
+
     <!--<context:component-scan base-package="pumpkin.controller"/>-->
 
+    <context:annotation-config/>
 
-    <context:component-scan base-package="pumpkin.controller" use-default-filters="false">
-    <context:include-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
-    <context:include-filter type="annotation" expression="org.springframework.web.bind.annotation.ControllerAdvice"/>
-    </context:component-scan>
+    <!-- 启动注解驱动的spring MVC功能,注册请求url和注解POJO类方法的映射-->
+    <mvc:annotation-driven />
+
+    <!--<context:component-scan base-package="pumpkin.controller.*" use-default-filters="false">-->
+    <!--<context:include-filter type="annotation" expression="org.springframework.stereotype.Controller"/>-->
+    <!--<context:include-filter type="annotation" expression="org.springframework.web.bind.annotation.ControllerAdvice"/>-->
+    <!--</context:component-scan>-->
+
+    <bean id="indexController" class="com.pumpkin.controller.IndexController"></bean>
+
+
+    <!--静态文件-->
+    <mvc:default-servlet-handler/>
 
 
 
@@ -46,7 +53,7 @@
     <bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
         <property name="viewClass" value="org.springframework.web.servlet.view.JstlView" />
         <property name="prefix" value="/WEB-INF/views/"/>      <!-- 前缀 -->
-        <property name="suffix" value=".jsp"/>   <!-- 后缀 -->
+        <!--<property name="suffix" value=".jsp"/>   &lt;!&ndash; 后缀 &ndash;&gt;-->
     </bean>
 
 
