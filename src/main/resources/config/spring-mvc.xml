@@ -11,7 +11,7 @@
     <!-- 启动注解驱动的spring MVC功能,注册请求url和注解POJO类方法的映射-->
     <mvc:annotation-driven />
 
-    <context:component-scan base-package="com.sshProject" />
+    <context:component-scan base-package="pumpkin" />
     <!--静态文件-->
     <mvc:default-servlet-handler/>
     <!-- 对模型视图名称的解析,在请求时模型视图名称添加前后缀 -->
