@@ -9,19 +9,21 @@
     http://www.springframework.org/schema/mvc
     http://www.springframework.org/schema/mvc/spring-mvc-4.3.xsd">
 
-    <!--<context:component-scan base-package="pumpkin.controller"/>-->
+
 
     <context:annotation-config/>
 
     <!-- 启动注解驱动的spring MVC功能,注册请求url和注解POJO类方法的映射-->
     <mvc:annotation-driven />
 
-    <!--<context:component-scan base-package="pumpkin.controller.*" use-default-filters="false">-->
+    <context:component-scan base-package="com.pumpkin.controller"/>
+
+    <!--<context:component-scan base-package="com.pumpkin.controller" use-default-filters="false">-->
     <!--<context:include-filter type="annotation" expression="org.springframework.stereotype.Controller"/>-->
     <!--<context:include-filter type="annotation" expression="org.springframework.web.bind.annotation.ControllerAdvice"/>-->
     <!--</context:component-scan>-->
 
-    <bean id="indexController" class="com.pumpkin.controller.IndexController"></bean>
+    <!--<bean id="indexController" class="com.pumpkin.controller.IndexController"></bean>-->
 
 
     <!--静态文件-->
@@ -31,7 +33,7 @@
 
     <!-- 静态资源访问 -->
     <!--如果webapp下你新建了文件夹，想访问里面的静态资源，那么就要在这配置一下-->
-    <mvc:resources location="/img/" mapping="/img/**"/>
+    <mvc:resources location="/image/" mapping="/img/**"/>
     <mvc:resources location="/css/" mapping="/css/**"/>
     <mvc:resources location="/js/" mapping="/js/**"/>
 
@@ -53,7 +55,7 @@
     <bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
         <property name="viewClass" value="org.springframework.web.servlet.view.JstlView" />
         <property name="prefix" value="/WEB-INF/views/"/>      <!-- 前缀 -->
-        <!--<property name="suffix" value=".jsp"/>   &lt;!&ndash; 后缀 &ndash;&gt;-->
+        <property name="suffix" value=".jsp"/>   <!-- 后缀 -->
     </bean>
 
 

@@ -49,7 +49,7 @@ public class Transport implements Serializable{
         public void setCreateTime(Date createTime) {
                 this.createTime = createTime;
         }
-        @Column(name = "arrvalTime")
+        @Column(name = "arrivalTime")
         public Date getArrivalTime() {
                 return arrivalTime;
         }

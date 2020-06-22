@@ -2,10 +2,6 @@ package com.pumpkin.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
-
-import javax.servlet.http.HttpServletRequest;
 
 @Controller
 @RequestMapping("/index")
@@ -13,7 +9,7 @@ public class IndexController {
 
         @RequestMapping("/toIndex")
         public String goToIndexHtml(Integer in){
-                return "index.jsp";
+                return "index";
         }
 
 //        @RequestMapping("/getString")

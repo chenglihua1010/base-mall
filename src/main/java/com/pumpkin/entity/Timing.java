@@ -41,7 +41,7 @@ public class Timing implements Serializable{
         public void setGoodsName(String goodsName) {
                 this.goodsName = goodsName;
         }
-        @Column(name = "createName" )
+        @Column(name = "createTime" )
         public Date getCreateTime() {
                 return createTime;
         }
