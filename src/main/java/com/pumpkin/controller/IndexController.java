@@ -9,7 +9,7 @@ public class IndexController {
 
         @RequestMapping("/toIndex")
         public String goToIndexHtml(Integer in){
-                return "index";
+                return "index3";
         }
 
 //        @RequestMapping("/getString")
