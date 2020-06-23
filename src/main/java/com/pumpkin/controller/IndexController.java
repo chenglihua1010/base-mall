@@ -1,6 +1,7 @@
 package com.pumpkin.controller;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
@@ -36,6 +37,8 @@ public class IndexController {
 
 
 
+
+
         //TODO redirect 重定位（方法、String:url）
         @RequestMapping("/toRedirect")
         public String goToRedirect(){
@@ -62,6 +65,24 @@ public class IndexController {
         //写一个成功页面，登录成功。login.jsp  errorLogin.jsp
         //写一个方法，成功的时候跳转哪个，失败的时候跳转哪一个
         //cetitijao1
+
+        @RequestMapping(value = "/list")
+        public String list(String communityId){
+                if(communityId==null){
+                        return "error";
+                }else {
+                        return "login";
+                }
+        }
+
+        @RequestMapping(value = "/tolist")
+        public String test(Integer number){
+                if(number==0){
+                        return "error";
+                }else{
+                        return "login";
+                }
+        }
 
 
 
