@@ -13,7 +13,7 @@ public class Merchandise implements Serializable{
         private String goodsName;
         private Integer inventory;
         private String imgs;
-        private String discribe;
+        private String describe;
         private Integer evacount;
         private Integer purchaseCount;
         private String origin;
@@ -59,14 +59,16 @@ public class Merchandise implements Serializable{
         public void setInventory(Integer inventory) {
                 this.inventory = inventory;
         }
-        @Column(name = "discribe")
-        public String getDiscribe() {
-                return discribe;
+        @Column(name = "describe")
+        public String getDescribe() {
+                return describe;
         }
 
-        public void setDiscribe(String discribe) {
-                this.discribe = discribe;
+        public void setDescribe(String describe) {
+                this.describe = describe;
         }
+
+
 
 
 
