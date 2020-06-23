@@ -1,13 +1,30 @@
 package com.pumpkin.controller;
 
+import com.pumpkin.entity.Merchandise;
+import com.pumpkin.service.impl.MerchandiseImpl;
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.servlet.ModelAndView;
+
+import javax.annotation.Resource;
+import java.util.List;
 
 @Controller
 @RequestMapping("/index")
 public class IndexController {
+
+        private MerchandiseImpl merchandiseImpl;
+
+        public MerchandiseImpl getMerchandiseImpl() {
+                return merchandiseImpl;
+        }
+        @Resource(name = "merchandiseImpl")
+        public void setMerchandiseImpl(MerchandiseImpl merchandiseImpl) {
+                this.merchandiseImpl = merchandiseImpl;
+        }
 
         @RequestMapping("/toIndex")
         public String goToIndexHtml(Integer in){
@@ -82,6 +99,20 @@ public class IndexController {
                 }else{
                         return "login";
                 }
+        }
+
+
+
+
+        @RequestMapping(value = "/findAllpumpkin")
+        public ModelAndView findAllpumpkin(){
+                List<Merchandise> merchandiseList= merchandiseImpl.findAllpumpkin();
+                ModelAndView modelAndView=new ModelAndView();
+                modelAndView.addObject(merchandiseList.get(0).getGoodsName(),"merchandiseList");
+                //写一个页面，返回的值显示在前端页面上面
+                modelAndView.setViewName("index.jsp");
+                return modelAndView;
+
         }
 
 

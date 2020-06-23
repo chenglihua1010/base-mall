@@ -17,6 +17,8 @@
     <mvc:annotation-driven />
 
     <context:component-scan base-package="com.pumpkin.controller"/>
+    <context:component-scan base-package="com.pumpkin.service.impl"/>
+
 
     <!--<context:component-scan base-package="com.pumpkin.controller" use-default-filters="false">-->
     <!--<context:include-filter type="annotation" expression="org.springframework.stereotype.Controller"/>-->
