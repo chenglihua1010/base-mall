@@ -18,9 +18,7 @@ public class IndexController {
 
         private MerchandiseImpl merchandiseImpl;
 
-        public MerchandiseImpl getMerchandiseImpl() {
-                return merchandiseImpl;
-        }
+
         @Resource(name = "merchandiseImpl")
         public void setMerchandiseImpl(MerchandiseImpl merchandiseImpl) {
                 this.merchandiseImpl = merchandiseImpl;
@@ -108,13 +106,13 @@ public class IndexController {
         public ModelAndView findAllpumpkin(){
                 List<Merchandise> merchandiseList= merchandiseImpl.findAllpumpkin();
                 ModelAndView modelAndView=new ModelAndView();
-                modelAndView.addObject(merchandiseList.get(0).getGoodsName(),"merchandiseList");
+                modelAndView.addObject(merchandiseList.get(0).getGoodsName(),"merchandiseList");//
                 //写一个页面，返回的值显示在前端页面上面
-                modelAndView.setViewName("index.jsp");
+                modelAndView.setViewName("index");
                 return modelAndView;
 
         }
-
+//根据名字获取南瓜信息，并将信息返回至页面
 
 
 
