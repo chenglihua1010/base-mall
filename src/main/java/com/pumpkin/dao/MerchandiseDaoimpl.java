@@ -11,11 +11,12 @@ import org.springframework.orm.hibernate5.HibernateTemplate;
 import org.springframework.orm.hibernate5.support.HibernateDaoSupport;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
 
 import javax.annotation.Resource;
 import java.util.ArrayList;
 import java.util.List;
-
+//@Transactional()
 @Repository("merchandiseDaoimpl")
 public class MerchandiseDaoimpl  extends HibernateDaoSupport implements MerchandiseDao{
 
@@ -90,6 +91,7 @@ public class MerchandiseDaoimpl  extends HibernateDaoSupport implements Merchand
                 return merchandiseList;
        }
 
+//        @Transactional(readOnly=true)
         public List<Merchandise> findById(Integer id){
                 List<Merchandise> merchandiseList=new ArrayList<Merchandise>();
                 HibernateTemplate hibernateTemplate=this.getHibernateTemplate();
@@ -97,7 +99,6 @@ public class MerchandiseDaoimpl  extends HibernateDaoSupport implements Merchand
 
 
 //                Session session=hibernateTemplate.getSessionFactory().getCurrentSession();
-
 
                 org.hibernate.Query query=this.getsession().createQuery(hql);
                 query.setParameter("id",id);
@@ -113,15 +114,12 @@ public class MerchandiseDaoimpl  extends HibernateDaoSupport implements Merchand
 
         public List<Merchandise> findByGn(String goodsName){
                 List<Merchandise> merchandiseList=new ArrayList<Merchandise>();
-                HibernateTemplate hibernateTemplate=new HibernateTemplate();
                 String hql="from Merchandise where goodsName=:goodsName";
-
-
-
-
-                List list=hibernateTemplate.find(hql);
+                org.hibernate.Query query=this.getsession().createQuery(hql);
+                query.setParameter("goodsName",goodsName);
+                List list=query.list();
                 if(null!=list){
-                        merchandiseList=(List<Merchandise>)hibernateTemplate.find(hql);
+                        merchandiseList=(List<Merchandise>)list;
                 }
                 return merchandiseList;
         }

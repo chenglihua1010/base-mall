@@ -170,6 +170,21 @@
         </dependency>
 
 
+        <!--<dependency>-->
+            <!--<groupId>aopalliance</groupId>-->
+            <!--<artifactId>aopalliance</artifactId>-->
+            <!--<version>1.0</version>-->
+            <!--<classifier>sources</classifier>-->
+            <!--<type>java-source</type>-->
+        <!--</dependency>-->
+
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-aspects</artifactId>
+            <version>4.3.9.RELEASE</version>
+        </dependency>
+
     </dependencies>
     <build>
         <finalName>base-mall</finalName>

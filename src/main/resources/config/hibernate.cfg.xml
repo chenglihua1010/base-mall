@@ -2,7 +2,7 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xmlns:tx="http://www.springframework.org/schema/tx"
        xmlns:context="http://www.springframework.org/schema/context"
-       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xmlns:mvc="http://www.springframework.org/schema/mvc" xmlns:aop="http://www.springframework.org/schema/aop"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
         http://www.springframework.org/schema/beans/spring-beans-4.1.xsd
         http://www.springframework.org/schema/context
@@ -10,7 +10,7 @@
         http://www.springframework.org/schema/tx
         http://www.springframework.org/schema/tx/spring-tx-4.1.xsd
         http://www.springframework.org/schema/mvc
-        http://www.springframework.org/schema/mvc/spring-mvc-4.1.xsd">
+        http://www.springframework.org/schema/mvc/spring-mvc-4.1.xsd http://www.springframework.org/schema/aop https://www.springframework.org/schema/aop/spring-aop.xsd">
 
     <!--********************************************配置Spring***************************************-->
     <!-- 自动扫描 决定扫描哪个包下的文件-->
@@ -48,10 +48,16 @@
                 <prop key="hibernate.dialect">${hibernate.dialect}</prop>   <!--指定数据库方言-->
                 <prop key="hibernate.show_sql">${hibernate.show_sql}</prop>     <!--在控制台显示执行的数据库操作语句-->
                 <prop key="hibernate.format_sql">${hibernate.format_sql}</prop>     <!--在控制台显示执行的数据哭操作语句（格式）-->
+                <!--<prop key="hibernate.current_session_context_class">org.springframework.orm.hibernate5.SpringSessionContext</prop>-->
             </props>
         </property>
 
     </bean>
+
+
+
+
+
 
     <!--  配置Person持久化类的DAO bean-->
 
@@ -69,6 +75,40 @@
     <!--<bean id="transactionManager" class="org.springframework.orm.hibernate4.HibernateTransactionManager">-->
     <bean id="transactionManager" class="org.springframework.orm.hibernate5.HibernateTransactionManager">
         <property name="sessionFactory" ref="sessionFactory" />
+        <property name="globalRollbackOnParticipationFailure" value="false" />
     </bean>
+
     <tx:annotation-driven transaction-manager="transactionManager" />
+
+
+
+
+
+
+
+    <tx:advice id="txAdvice" transaction-manager="transactionManager">
+
+
+    <tx:attributes>
+    <!-- 传播行为 -->
+    <tx:method name="save*" propagation="REQUIRED"/>
+    <tx:method name="delete*" propagation="REQUIRED"/>
+    <tx:method name="insert*" propagation="REQUIRED"/>
+    <tx:method name="update*" propagation="REQUIRED"/>
+    <tx:method name="list*" propagation="SUPPORTS" read-only="true"/>
+    <!--<tx:method name="get*" propagation="SUPPORTS" read-only="true"/>  -->
+    </tx:attributes>
+    </tx:advice>
+
+
+    <!--开启基于注解的事务，使用xml配置形式的事务（必要主要的都是使用配置式）  -->
+    <aop:config>
+    <!-- 切入点表达式 -->
+    <aop:pointcut expression="execution(* com.pumpkin.service.*.*(..))" id="txPoint"/>
+    <!-- 配置事务增强 -->
+    <aop:advisor advice-ref="txAdvice" pointcut-ref="txPoint"/>
+    </aop:config>
+    <aop:aspectj-autoproxy  proxy-target-class="true"/>
+
+
 </beans>
