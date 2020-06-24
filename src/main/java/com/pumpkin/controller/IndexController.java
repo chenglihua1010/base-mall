@@ -2,6 +2,7 @@ package com.pumpkin.controller;
 
 import com.pumpkin.entity.Merchandise;
 import com.pumpkin.service.impl.MerchandiseImpl;
+import org.hibernate.query.Query;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -106,31 +107,30 @@ public class IndexController {
         public ModelAndView findAllpumpkin(){
                 List<Merchandise> merchandiseList= merchandiseImpl.findAllpumpkin();
                 ModelAndView modelAndView=new ModelAndView();
-                modelAndView.addObject(merchandiseList.get(0).getGoodsName(),"merchandiseList");//
+                modelAndView.addObject("merchandiseList",merchandiseList.get(0).getGoodsName());//
                 //写一个页面，返回的值显示在前端页面上面
-                modelAndView.setViewName("index");
+                modelAndView.setViewName("null");
                 return modelAndView;
 
         }
 //根据名字获取南瓜信息，并将信息返回至页面
-        @RequestMapping("/findByName")//乱码？？
-        public ModelAndView findByName(String goodsName){
-                List<Merchandise> merchandiseList=merchandiseImpl.findByName(goodsName);
-                ModelAndView modelAndView=new ModelAndView();
-                modelAndView.addObject(merchandiseList.get(0).getGoodsName(),"merchandiseList");
-
-                modelAndView.setViewName("index");
-                return modelAndView;
-        }
 
         @RequestMapping("/findById")
         public ModelAndView findById(Integer id){
                 List<Merchandise> merchandiseList=merchandiseImpl.findById(id);
                 ModelAndView modelAndView=new ModelAndView();
                 modelAndView.addObject(merchandiseList.get(0).getGoodsName(),"merchandiseList");
-
-                modelAndView.setViewName("index");
+                modelAndView.setViewName("login");
                 return modelAndView;
         }
+
+        @RequestMapping("/findByGn")
+        public ModelAndView findByGn(String goodsName){
+                List<Merchandise> merchandiseList=merchandiseImpl.findByGn(goodsName);
+                ModelAndView modelAndView=new ModelAndView();
+                modelAndView.addObject(merchandiseList.get(0).getGoodsName(),"merchandiseList");
+                return modelAndView;
+        }
+
 
 }
