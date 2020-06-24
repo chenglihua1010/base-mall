@@ -33,6 +33,14 @@ public class MerchandiseImpl implements MerchandiseInterface{
                 return this.merchandiseDaoimpl.findAllpumpkin();
         }
 
+        public List<Merchandise> findByName(String goodsName){
+                goodsName=merchandise.getGoodsName();
+                return this.merchandiseDaoimpl.findByName(goodsName);
+        }
 
+
+        public List<Merchandise> findById(Integer id){
+                return this.merchandiseDaoimpl.findById(id);
+        }
 
 }

@@ -113,5 +113,24 @@ public class IndexController {
 
         }
 //根据名字获取南瓜信息，并将信息返回至页面
+        @RequestMapping("/findByName")//乱码？？
+        public ModelAndView findByName(String goodsName){
+                List<Merchandise> merchandiseList=merchandiseImpl.findByName(goodsName);
+                ModelAndView modelAndView=new ModelAndView();
+                modelAndView.addObject(merchandiseList.get(0).getGoodsName(),"merchandiseList");
+
+                modelAndView.setViewName("index");
+                return modelAndView;
+        }
+
+        @RequestMapping("/findById")
+        public ModelAndView findById(Integer id){
+                List<Merchandise> merchandiseList=merchandiseImpl.findById(id);
+                ModelAndView modelAndView=new ModelAndView();
+                modelAndView.addObject(merchandiseList.get(0).getGoodsName(),"merchandiseList");
+
+                modelAndView.setViewName("index");
+                return modelAndView;
+        }
 
 }
