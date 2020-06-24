@@ -100,7 +100,7 @@ public class MerchandiseDaoimpl  extends HibernateDaoSupport implements Merchand
 
 //                Session session=hibernateTemplate.getSessionFactory().getCurrentSession();
 
-                org.hibernate.Query query=this.getsession().createQuery(hql);
+                Query query=this.getsession().createQuery(hql);
                 query.setParameter("id",id);
                 List list=query.list();
 
