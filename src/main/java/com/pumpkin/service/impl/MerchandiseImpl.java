@@ -19,7 +19,7 @@ public class MerchandiseImpl implements MerchandiseInterface{
         @Resource(name = "merchandiseDaoimpl")
         public MerchandiseDaoimpl merchandiseDaoimpl;
 
-
+        public Merchandise merchandise;
         public MerchandiseDaoimpl getMerchandiseDaoimpl() {
                 return merchandiseDaoimpl;
         }
@@ -32,4 +32,7 @@ public class MerchandiseImpl implements MerchandiseInterface{
         public List<Merchandise> findAllpumpkin() {
                 return this.merchandiseDaoimpl.findAllpumpkin();
         }
+
+
+
 }

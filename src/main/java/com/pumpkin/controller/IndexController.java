@@ -114,6 +114,4 @@ public class IndexController {
         }
 //根据名字获取南瓜信息，并将信息返回至页面
 
-
-
 }

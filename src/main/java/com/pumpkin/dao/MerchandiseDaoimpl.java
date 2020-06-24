@@ -3,6 +3,7 @@ package com.pumpkin.dao;
 import com.fasterxml.jackson.databind.util.JSONPObject;
 import com.pumpkin.dao.impl.BaseDaoImpl;
 import com.pumpkin.entity.Merchandise;
+import com.sun.org.apache.regexp.internal.RE;
 import org.hibernate.SessionFactory;
 import org.hibernate.criterion.DetachedCriteria;
 import org.springframework.orm.hibernate5.HibernateTemplate;
@@ -70,4 +71,30 @@ public class MerchandiseDaoimpl  extends HibernateDaoSupport implements Merchand
                 }
                 return merchandiseList;
        }
+
+        public List<Merchandise> findByName(String goodsName){
+                HibernateTemplate template=this.getHibernateTemplate();
+                Merchandise merchandise=(Merchandise) template.get(Merchandise.class, goodsName);
+                List<Merchandise> merchandiseList=findAll();
+                return merchandiseList;
+        }
+
+        public Merchandise findById(Integer id){
+                HibernateTemplate template=this.getHibernateTemplate();
+                Merchandise merchandise=(Merchandise) template.get(Merchandise.class, id);
+                return merchandise;
+        }
+
+        public List<Merchandise> findOne(Integer id){
+                Merchandise merchandise=findById(id);
+                List<Merchandise> merchandiseList=new ArrayList<Merchandise>();
+                HibernateTemplate template=this.getHibernateTemplate();
+                String hql="from merchandise";
+                List list=template.find(hql);
+                if(null !=list){
+                        merchandiseList=(List<Merchandise>)template.find(hql);
+                }
+                return merchandiseList;
+        }
+
 }
