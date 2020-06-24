@@ -114,8 +114,11 @@ public class MerchandiseDaoimpl  extends HibernateDaoSupport implements Merchand
 
         public List<Merchandise> findByGn(String goodsName){
                 List<Merchandise> merchandiseList=new ArrayList<Merchandise>();
-                String hql="from Merchandise where goodsName=:goodsName";
-                org.hibernate.Query query=this.getsession().createQuery(hql);
+//                String hql="from Merchandise where goodsName=:goodsName";
+//                org.hibernate.Query query=this.getsession().createQuery(hql);
+                String sql="SELECT  * from base_merchandise where goodsName=:goodsName";
+                org.hibernate.Query query=this.getsession().createSQLQuery(sql).addEntity(Merchandise.class);
+
                 query.setParameter("goodsName",goodsName);
                 List list=query.list();
                 if(null!=list){
