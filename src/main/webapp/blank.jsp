@@ -12,8 +12,11 @@
     <tr>
         <td><s:property value="goodsName" />
         </td>
-        <td><s:property value="goodsId" />
-        <td><s:property value="goodsId" />
+        <td><s:property value="goodsIdghhghj" />
+
+
+
+
         </td>
         <td><s:property value="origin" />
         </td>
