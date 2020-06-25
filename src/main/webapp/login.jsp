@@ -36,7 +36,7 @@
 <body>
 <form method="post" action="/user/toLogin">
     用户名：<input name="accountId" type="text"><br/>
-    密码：<input name="user.password" type="password"> <br/>
+    密码：<input name="password" type="password"> <br/>
     <input name="Submits" type="submit" value="登录"/>
     <input name="ReSet" type="reset" value="重置"/>
     <a href="regist.jsp"><input type="button"  value="注册"/></a>
