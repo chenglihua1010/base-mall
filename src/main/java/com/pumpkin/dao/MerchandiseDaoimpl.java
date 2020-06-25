@@ -97,9 +97,6 @@ public class MerchandiseDaoimpl  extends HibernateDaoSupport implements Merchand
                 HibernateTemplate hibernateTemplate=this.getHibernateTemplate();
                 String hql="from Merchandise where id=:id";
 
-
-//                Session session=hibernateTemplate.getSessionFactory().getCurrentSession();
-
                 org.hibernate.Query query=this.getsession().createQuery(hql);
                 query.setParameter("id",id);
                 List list=query.list();

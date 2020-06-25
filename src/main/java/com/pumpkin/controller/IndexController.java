@@ -109,7 +109,7 @@ public class IndexController {
                 ModelAndView modelAndView=new ModelAndView();
                 modelAndView.addObject("merchandiseList",merchandiseList.get(0).getGoodsName());//
                 //写一个页面，返回的值显示在前端页面上面
-                modelAndView.setViewName("null");
+                modelAndView.setViewName("blank");
                 return modelAndView;
 
         }
@@ -119,8 +119,8 @@ public class IndexController {
         public ModelAndView findById(Integer id){
                 List<Merchandise> merchandiseList=merchandiseImpl.findById(id);
                 ModelAndView modelAndView=new ModelAndView();
-                modelAndView.addObject(merchandiseList.get(0).getGoodsName(),"merchandiseList");
-                modelAndView.setViewName("login");
+                modelAndView.addObject("merchandiseList",merchandiseList.get(0).getGoodsName());
+                modelAndView.setViewName("blank");
                 return modelAndView;
         }
 
@@ -128,7 +128,8 @@ public class IndexController {
         public ModelAndView findByGn(String goodsName){
                 List<Merchandise> merchandiseList=merchandiseImpl.findByGn(goodsName);
                 ModelAndView modelAndView=new ModelAndView();
-                modelAndView.addObject(merchandiseList.get(0).getGoodsName(),"merchandiseList");
+                modelAndView.addObject("merchandiseList",merchandiseList.get(0).getGoodsName());
+                modelAndView.setViewName("blank");
                 return modelAndView;
         }
 

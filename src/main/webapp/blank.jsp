@@ -12,10 +12,7 @@
     <tr>
         <td><s:property value="goodsName" />
         </td>
-        <td><s:property value="goodsIdghhghj" />
-
-
-
+        <td><s:property value="goodsId" />
 
         </td>
         <td><s:property value="origin" />
