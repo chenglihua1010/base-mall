@@ -29,7 +29,7 @@ public class UserController {
                 if(null==user){
                         modelAndView.setViewName("error");
                 }else{
-                        modelAndView.setViewName("success");
+                        modelAndView.setViewName("index");
                         modelAndView.addObject("user",user);
                 }
                 return modelAndView;
