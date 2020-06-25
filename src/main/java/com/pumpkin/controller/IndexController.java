@@ -5,6 +5,7 @@ import com.pumpkin.service.impl.MerchandiseImpl;
 import org.hibernate.query.Query;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -133,5 +134,32 @@ public class IndexController {
                 return modelAndView;
         }
 
+        @RequestMapping("/deleteById")
+        public ModelAndView deleteById(Integer id){
+                merchandiseImpl.deleteById(id);
+                ModelAndView modelAndView=new ModelAndView();
+                modelAndView.setViewName("blank");
+                return modelAndView;
+        }
+         @RequestMapping("/add")
+         public ModelAndView add(){
+                 Merchandise merchandise=new Merchandise();
+
+                 merchandise.setGoodsName("南瓜11号");
+                 merchandise.setDescribe("sssssss");
+                 merchandise.setGoodsId("nangua10");
+                 merchandise.setEvacount(11);
+                 merchandise.setImgs("dfsfs");
+                 merchandise.setOrigin("sfsfs");
+                 merchandise.setPurchaseCount(3434);
+                 merchandise.setInventory(3434);
+
+                 merchandiseImpl.add(merchandise);
+
+                 ModelAndView modelAndView=new ModelAndView();
+                 modelAndView.addObject("merchandiseList",merchandise.getGoodsName());
+                 modelAndView.setViewName("blank");
+                 return modelAndView;
+         }
 
 }

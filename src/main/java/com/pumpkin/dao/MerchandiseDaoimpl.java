@@ -49,23 +49,34 @@ public class MerchandiseDaoimpl  extends BaseDaoImpl<Merchandise> implements Mer
                 return merchandiseList;
         }
 
-        public void save(Merchandise merchandise) {
+//        public void save(Merchandise merchandise) {
+//                super.save(merchandise);
+//        }
+//
+//        public void delete(Integer id) {
+//                super.delete(id);
+//        }
+//
+//        public void delete(Merchandise merchandise) {
+//
+//        }
+//
+//        public void update(Merchandise merchandise) {
+//
+//        }
 
+        public void deleteByID(Integer id){
+                Merchandise merchandise=new Merchandise();
+                merchandise.setId(id);
+                delete(merchandise);
         }
 
-        public void delete(Integer id) {
-
-        }
-
-        public void delete(Merchandise merchandise) {
-
-        }
-
-        public void update(Merchandise merchandise) {
-
+        public void add(Merchandise merchandise){
+              save(merchandise);
         }
 
         public Merchandise getById(Integer id) {
+
                 HibernateTemplate template=this.getHibernateTemplate();
                 return (Merchandise) template.get(Merchandise.class, id);
 

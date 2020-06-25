@@ -39,19 +39,21 @@ public class BaseDaoImpl<T> extends HibernateDaoSupport implements BaseDao<T> {
         }
 
         public void save(T t) {
+//                super.getHibernateTemplate().setCheckWriteOperations(false);
                 super.getHibernateTemplate().save(t);
+//                super.getHibernateTemplate().save()
         }
 
         public void delete(Integer id) {
-
+                super.getHibernateTemplate().delete(id);
         }
 
         public void delete(T t) {
-
+                super.getHibernateTemplate().delete(t);
         }
 
         public void update(T t) {
-
+                super.getHibernateTemplate().update(t);
         }
 
         public T getById(Integer id) {

@@ -21,6 +21,10 @@ public class MerchandiseImpl implements MerchandiseInterface{
         public MerchandiseDaoimpl merchandiseDaoimpl;
 
 
+        public void deleteById(Integer id){
+                merchandiseDaoimpl.deleteByID(id);
+        }
+
         public MerchandiseDaoimpl getMerchandiseDaoimpl() {
                 return merchandiseDaoimpl;
         }
@@ -39,5 +43,9 @@ public class MerchandiseImpl implements MerchandiseInterface{
         }
         public List<Merchandise> findByGn(String goodsName){
                 return this.merchandiseDaoimpl.findByGn(goodsName);
+        }
+
+        public void add(Merchandise merchandise){
+                merchandiseDaoimpl.add(merchandise);
         }
 }

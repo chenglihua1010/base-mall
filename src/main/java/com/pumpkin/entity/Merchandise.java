@@ -59,7 +59,7 @@ public class Merchandise implements Serializable{
         public void setInventory(Integer inventory) {
                 this.inventory = inventory;
         }
-        @Column(name = "describe")
+        @Column(name = "[describe]")
         public String getDescribe() {
                 return describe;
         }
