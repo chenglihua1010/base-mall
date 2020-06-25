@@ -38,9 +38,8 @@ public class BaseDaoImpl<T> extends HibernateDaoSupport implements BaseDao<T> {
                 clazz = (Class) typeClazz.getActualTypeArguments()[0];//获得运行的泛型类型
         }
 
-
         public void save(T t) {
-
+                super.getHibernateTemplate().save(t);
         }
 
         public void delete(Integer id) {

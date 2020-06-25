@@ -97,16 +97,9 @@ public class MerchandiseDaoimpl  extends BaseDaoImpl<Merchandise> implements Mer
                 List<Merchandise> merchandiseList=new ArrayList<Merchandise>();
                 HibernateTemplate hibernateTemplate=this.getHibernateTemplate();
                 String hql="from Merchandise where id=:id";
-
-                org.hibernate.Query query=this.getsession().createQuery(hql);
-
-//                Session session=hibernateTemplate.getSessionFactory().getCurrentSession();
-                Session session= getSession();
                 Query query=getSession().createQuery(hql);
                 query.setParameter("id",id);
                 List list=query.list();
-
-//                List list=hibernateTemplate.find(hql);
                 if(null!=list){
                         merchandiseList=(List<Merchandise>)list;
                 }
