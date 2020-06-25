@@ -28,7 +28,7 @@ public class IndexController {
 
         @RequestMapping("/toIndex")
         public String goToIndexHtml(Integer in){
-                return "index3";
+                return "index";
         }
 //尝试访问views index2.jsp  访问不到
         @RequestMapping("/toIndexs")
