@@ -1,13 +1,8 @@
 package com.pumpkin.service.impl;
 
-import com.pumpkin.dao.MerchandiseDao;
-import com.pumpkin.dao.MerchandiseDaoimpl;
+import com.pumpkin.dao.impl.MerchandiseDaoimpl;
 import com.pumpkin.entity.Merchandise;
 import com.pumpkin.service.MerchandiseInterface;
-import org.hibernate.SessionFactory;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
