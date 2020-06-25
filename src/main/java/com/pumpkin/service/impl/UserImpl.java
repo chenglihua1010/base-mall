@@ -12,15 +12,15 @@ import javax.annotation.Resource;
 @Service("userImpl")
 public class UserImpl implements UserInterface{
 
-        public UserDaoImpl userDaoimpl;
+        public UserDaoImpl userDaoImpl;
         @Resource(name = "userDaoImpl")
         public void setUserDaoimpl(UserDaoImpl userDaoimpl) {
-                this.userDaoimpl = userDaoimpl;
+                this.userDaoImpl = userDaoimpl;
         }
 
         public User getUserByAccountIdAndPsw(String accountId, String password){
                 User user=new User();
-                user=userDaoimpl.getUserByAccountIdAndPsw(accountId,password);
+                user=userDaoImpl.getUserByAccountIdAndPsw(accountId,password);
                 return user;
         }
 }
