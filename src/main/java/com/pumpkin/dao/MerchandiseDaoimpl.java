@@ -16,15 +16,14 @@ import org.springframework.transaction.annotation.Transactional;
 import javax.annotation.Resource;
 import java.util.ArrayList;
 import java.util.List;
-//@Transactional()
 @Repository("merchandiseDaoimpl")
-public class MerchandiseDaoimpl  extends HibernateDaoSupport implements MerchandiseDao{
+public class MerchandiseDaoimpl  extends BaseDaoImpl<Merchandise> implements MerchandiseDao{
 
 
 
-
-        @Resource(name = "sessionFactory")
-        private SessionFactory sessionFactory;
+//
+//        @Resource(name = "sessionFactory")
+//        private SessionFactory sessionFactory;
 
 
 
@@ -39,13 +38,14 @@ public class MerchandiseDaoimpl  extends HibernateDaoSupport implements Merchand
 //                this.sessionFactory=sessionFactory;
 //        }
 
-        public Session getsession(){
-                return sessionFactory.getCurrentSession();
-        }
+//        public Session getsession(){
+//                return sessionFactory.getCurrentSession();
+//        }
 
 
         public List<Merchandise> findAllpumpkin(){
                 List<Merchandise> merchandiseList=findAll();
+
                 return merchandiseList;
         }
 
@@ -68,6 +68,7 @@ public class MerchandiseDaoimpl  extends HibernateDaoSupport implements Merchand
         public Merchandise getById(Integer id) {
                 HibernateTemplate template=this.getHibernateTemplate();
                 return (Merchandise) template.get(Merchandise.class, id);
+
         }
 
         public Integer getTotalCount(DetachedCriteria dc) {
@@ -100,8 +101,8 @@ public class MerchandiseDaoimpl  extends HibernateDaoSupport implements Merchand
                 org.hibernate.Query query=this.getsession().createQuery(hql);
 
 //                Session session=hibernateTemplate.getSessionFactory().getCurrentSession();
-
-                Query query=this.getsession().createQuery(hql);
+                Session session= getSession();
+                Query query=getSession().createQuery(hql);
                 query.setParameter("id",id);
                 List list=query.list();
 
@@ -118,7 +119,7 @@ public class MerchandiseDaoimpl  extends HibernateDaoSupport implements Merchand
 //                String hql="from Merchandise where goodsName=:goodsName";
 //                org.hibernate.Query query=this.getsession().createQuery(hql);
                 String sql="SELECT  * from base_merchandise where goodsName=:goodsName";
-                org.hibernate.Query query=this.getsession().createSQLQuery(sql).addEntity(Merchandise.class);
+                org.hibernate.Query query=this.getSession().createSQLQuery(sql).addEntity(Merchandise.class);
 
                 query.setParameter("goodsName",goodsName);
                 List list=query.list();
