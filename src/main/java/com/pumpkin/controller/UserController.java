@@ -6,11 +6,13 @@ import com.pumpkin.service.impl.MerchandiseImpl;
 import com.pumpkin.service.impl.UserImpl;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.util.ArrayList;
 import java.util.List;
 
 @Controller
@@ -38,6 +40,44 @@ public class UserController {
                 return userImpl;
         }
 
+
+
+
+
+
+
+        private static List<User> userList;
+        {
+                userList=new ArrayList<User>();
+        }
+
+        /*
+        注册页面：register.jsp
+         */
+
+
+        @RequestMapping("/showReUser")
+        public String showReUser(){
+                return "register";
+        }
+        //注册的数据传到addUser？？
+        //method = RequestMethod.GET/POST???
+
+        @RequestMapping("/addUser")
+        public String addUser(
+                @RequestParam("accountId")String accountId,
+                @RequestParam("password")String password,
+                @RequestParam("name")String name){
+                User user=new User();
+                user.setAccountId(accountId);
+                user.setPassword(password);
+                user.setName(name);
+                userImpl.add(user);
+                return "/login";
+        }
+
+
+
         @RequestMapping("/toLogin")
         public ModelAndView toLogin(HttpServletRequest request, HttpServletResponse response){
                 ModelAndView modelAndView=new ModelAndView();
@@ -51,11 +91,13 @@ public class UserController {
                         modelAndView.addObject("user",user);
 
                         List<Merchandise> merchandiseList= merchandiseImpl.findAllpumpkin();
-                        modelAndView.addObject("merchandise",merchandiseList.get(0));
+                        modelAndView.addObject("merchandiseList",merchandiseList);
+//                        modelAndView.addObject("merchandise0",merchandiseList.get(0));
+//                        modelAndView.addObject("merchandise1",merchandiseList.get(1));
+//                        modelAndView.addObject("merchandise2",merchandiseList.get(2));
+//                        modelAndView.addObject("merchandise3",merchandiseList.get(3));
+//                        modelAndView.addObject("merchandise4",merchandiseList.get(4));
                 }
-
-
-
 
                 return modelAndView;
         }

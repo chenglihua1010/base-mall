@@ -108,9 +108,9 @@ public class IndexController {
         public ModelAndView findAllpumpkin(){
                 List<Merchandise> merchandiseList= merchandiseImpl.findAllpumpkin();
                 ModelAndView modelAndView=new ModelAndView();
-                modelAndView.addObject("merchandiseList",merchandiseList.get(0).getGoodsName());//
+                modelAndView.addObject("merchandiseList",merchandiseList);
                 //写一个页面，返回的值显示在前端页面上面
-                modelAndView.setViewName("blank");
+                modelAndView.setViewName("merchandiseInfor");
                 return modelAndView;
 
         }

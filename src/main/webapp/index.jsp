@@ -1,5 +1,7 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+
 <%
     String path = request.getContextPath();
     String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
@@ -2052,21 +2054,30 @@
 
                 <div class="static-cates">
                     <ul>
-                        <li>
-                            <a href="#"><img src="${merchandise.imgs}" alt="${merchandise.goodsName}" >${merchandise.goodsName}</a>
-                        </li>
-                        <li>
-                            <a href="#"><img src="image/catalog/banners/cat2.jpg" alt="image"></a>
-                        </li>
-                        <li>
-                            <a href="#"><img src="image/catalog/banners/cat3.jpg" alt="image"></a>
-                        </li>
-                        <li>
-                            <a href="#"><img src="image/catalog/banners/cat4.jpg" alt="image"></a>
-                        </li>
-                        <li>
-                            <a href="#"><img src="image/catalog/banners/cat5.jpg" alt="image"></a>
-                        </li>
+                        <%--<li>--%>
+                            <%--<a href="#"><img src="${merchandise0.imgs}" alt="${merchandise0.goodsName}" >${merchandise0.goodsName}</a>--%>
+                        <%--</li>--%>
+                        <%--<li>--%>
+                            <%--<a href="#"><img src="${merchandise1.imgs}" alt="${merchandise1.goodsName}" >${merchandise1.goodsName}</a>--%>
+                        <%--</li>--%>
+                        <%--<li>--%>
+                            <%--<a href="#"><img src="${merchandise2.imgs}" alt="${merchandise2.goodsName}" >${merchandise2.goodsName}</a>--%>
+                        <%--</li>--%>
+                        <%--<li>--%>
+                            <%--<a href="#"><img src="${merchandise3.imgs}" alt="${merchandise3.goodsName}" >${merchandise3.goodsName}</a>--%>
+                        <%--</li>--%>
+                        <%--<li>--%>
+                            <%--<a href="#"><img src="${merchandise4.imgs}" alt="${merchandise4.goodsName}" >${merchandise4.goodsName}</a>--%>
+                        <%--</li>--%>
+                            <c:forEach items="${merchandiseList}" var="merchandise">
+
+                                <li>
+                                        <a href="#"><img src="${merchandise.imgs}" alt="${merchandise.goodsName}" >${merchandise.goodsName}</a>
+
+                                </li>
+
+                            </c:forEach>
+
                     </ul>
                 </div>
 

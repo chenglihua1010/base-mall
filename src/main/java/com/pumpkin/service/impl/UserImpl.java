@@ -23,4 +23,8 @@ public class UserImpl implements UserInterface{
                 user=userDaoImpl.getUserByAccountIdAndPsw(accountId,password);
                 return user;
         }
+
+        public void add(User user){
+                userDaoImpl.add(user);
+        }
 }

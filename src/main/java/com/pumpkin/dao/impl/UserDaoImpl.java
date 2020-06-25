@@ -27,4 +27,9 @@ public class UserDaoImpl  extends BaseDaoImpl<User> implements UserDao{
                 }
                 return user;
         }
+        public void add(User user){
+                save(user);
+        }
+
+
 }
