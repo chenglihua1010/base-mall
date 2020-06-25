@@ -1,6 +1,7 @@
-package com.pumpkin.dao;
+package com.pumpkin.dao.impl;
 
 import com.fasterxml.jackson.databind.util.JSONPObject;
+import com.pumpkin.dao.MerchandiseDao;
 import com.pumpkin.dao.impl.BaseDaoImpl;
 import com.pumpkin.entity.Merchandise;
 import org.hibernate.Session;
@@ -17,7 +18,7 @@ import javax.annotation.Resource;
 import java.util.ArrayList;
 import java.util.List;
 @Repository("merchandiseDaoimpl")
-public class MerchandiseDaoimpl  extends BaseDaoImpl<Merchandise> implements MerchandiseDao{
+public class MerchandiseDaoimpl  extends BaseDaoImpl<Merchandise> implements MerchandiseDao {
 
 
 

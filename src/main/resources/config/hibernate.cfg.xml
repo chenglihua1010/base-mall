@@ -61,7 +61,7 @@
 
     <!--  配置Person持久化类的DAO bean-->
 
-    <bean id="merchandiseDaoimpl" class="com.pumpkin.dao.MerchandiseDaoimpl">
+    <bean id="merchandiseDaoimpl" class="com.pumpkin.dao.impl.MerchandiseDaoimpl">
         <property name="sessionFactory" ref="sessionFactory" />
 </bean>
 
