@@ -348,9 +348,10 @@
     margin-top: 3px; }
   .typeheader-1 .wishlist-comp li a i {
     font-size: 26px;
-    color: #fff; }
-  .typeheader-1 .wishlist-comp li a span {
-    display: none; }
+    color: white; }
+  /*.typeheader-1 .wishlist-comp li a span {*/
+    /*display: none; */
+  /*}*/
   .typeheader-1 .wishlist-comp li a.top-link-wishlist {
     width: 35px;
     height: 32px;

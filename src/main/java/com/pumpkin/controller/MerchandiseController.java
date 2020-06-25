@@ -6,4 +6,5 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 @RequestMapping("/merchandise")
 public class MerchandiseController {
+
 }
