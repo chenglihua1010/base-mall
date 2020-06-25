@@ -78,6 +78,8 @@
         <property name="globalRollbackOnParticipationFailure" value="false" />
     </bean>
 
+
+    <!-- 开启事务  -->
     <tx:annotation-driven transaction-manager="transactionManager" />
 
 
@@ -85,7 +87,7 @@
 
 
 
-
+    <!-- 事物管理器配置  -->
     <tx:advice id="txAdvice" transaction-manager="transactionManager">
 
 
