@@ -1416,6 +1416,8 @@
 									</div>
 									<div class="cart">
                                         <input type="hidden" name="goodsId" value="${merchandise.goodsId}">
+                                        <input type="hidden" name="goodsName" value="${merchandise.goodsName}">
+                                        <input type="hidden" name="goodsPrice" value="${merchandise.goodsPrice}">
 										<input type="submit" data-toggle="tooltip" title="" value="提交订单" data-loading-text="Loading..." id="button-cart" class="btn btn-mega btn-lg" onclick="cart.add('42', '1');" data-original-title="Add to Cart">
 									</div>
 									<div class="add-to-links wish_comp">

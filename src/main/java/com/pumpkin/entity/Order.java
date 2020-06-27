@@ -16,7 +16,7 @@ public class Order implements Serializable{
         private String goodsId;
         private String goodsName;
         private Integer count;
-        private Integer allPrice;
+        private Double allPrice;
         private String address;
         private Integer phone;
         private Integer pay;
@@ -73,14 +73,18 @@ public class Order implements Serializable{
         public void setCount(Integer count) {
                 this.count = count;
         }
+
         @Column(name = "allPrice")
-        public Integer getAllPrice() {
+        public Double getAllPrice() {
                 return allPrice;
         }
 
-        public void setAllPrice(Integer allPrice) {
+        public void setAllPrice(Double allPrice) {
                 this.allPrice = allPrice;
         }
+
+
+
         @Column(name = "address")
         public String getAddress() {
                 return address;

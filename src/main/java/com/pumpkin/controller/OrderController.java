@@ -8,6 +8,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
+import java.util.Date;
 
 @Controller
 @RequestMapping("/order")
@@ -25,8 +26,19 @@ public class OrderController {
             ModelAndView modelAndView=new ModelAndView();
                 String goodsName=request.getParameter("goodsName");
                 String goodsId=request.getParameter("goodsId");
+                String goodsPrice=request.getParameter("goodsPrice");
+                Double goodsPriceDouble=Double.parseDouble(goodsPrice);
+                String count=request.getParameter("quantity");
+                Integer countInt=Integer.parseInt("count");
+                Double allPrice=countInt*goodsPriceDouble;
+
                 Order order=new Order();
                 order.setGoodsName(goodsName);
+                order.setGoodsId(goodsId);
+                order.setAllPrice(allPrice);
+                order.setCount(countInt);
+                order.setCreateTime(new Date());
+                order.setStatus(1);
                 orderImpl.add(order);
                 return modelAndView;
         }

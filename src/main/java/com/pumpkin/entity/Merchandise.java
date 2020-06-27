@@ -17,16 +17,16 @@ public class Merchandise implements Serializable{
         private Integer evacount;
         private Integer purchaseCount;
         private String origin;
-        private String goodsPrice;
-
+        private Double goodsPrice;
         @Column(name = "goodsPrice")
-        public String getGoodsPrice() {
+        public Double getGoodsPrice() {
                 return goodsPrice;
         }
 
-        public void setGoodsPrice(String goodsPrice) {
+        public void setGoodsPrice(Double goodsPrice) {
                 this.goodsPrice = goodsPrice;
         }
+
 
         @Id
         @GeneratedValue(strategy = GenerationType.IDENTITY)
