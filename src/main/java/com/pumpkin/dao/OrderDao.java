@@ -1,4 +1,6 @@
 package com.pumpkin.dao;
 
-public class OrderDao {
+import com.pumpkin.entity.Order;
+
+public interface OrderDao extends BaseDao<Order> {
 }
