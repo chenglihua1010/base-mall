@@ -2,7 +2,9 @@ package com.pumpkin.controller;
 
 import com.pumpkin.entity.Merchandise;
 import com.pumpkin.entity.Order;
+import com.pumpkin.entity.User;
 import com.pumpkin.service.impl.MerchandiseImpl;
+import com.pumpkin.service.impl.UserImpl;
 import org.hibernate.query.Query;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Controller;
@@ -22,12 +24,18 @@ import java.util.List;
 public class IndexController {
 
         private MerchandiseImpl merchandiseImpl;
+        private UserImpl userImpl;
 
 
         @Resource(name = "merchandiseImpl")
         public void setMerchandiseImpl(MerchandiseImpl merchandiseImpl) {
                 this.merchandiseImpl = merchandiseImpl;
         }
+        @Resource(name = "userImpl")
+        public void setUserImpl(UserImpl userImpl) {
+                this.userImpl = userImpl;
+        }
+
 
         @RequestMapping("/toIndex")
         public String goToIndexHtml(Integer in){
@@ -131,9 +139,13 @@ public class IndexController {
         public ModelAndView findByGI(HttpServletRequest request) {
                 String goodsId=request.getParameter("goodsId");
                 String accountId=request.getParameter("accountId");
+                List<User> userList=userImpl.findByAccountId(accountId);
+
                 List<Merchandise> merchandisesList = merchandiseImpl.findByGI(goodsId);
                 ModelAndView modelAndView=new ModelAndView();
-                modelAndView.addObject("merchandise",merchandisesList.get(0));
+                modelAndView.addObject("merchandise",merchandisesList.get(0)).addObject("user",userList.get(0));
+                //
+//                modelAndView.addObject("user",userList.get(0));
                 modelAndView.setViewName("product");
                 return modelAndView;
         }

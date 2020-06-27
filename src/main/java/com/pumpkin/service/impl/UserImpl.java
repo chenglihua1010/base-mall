@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import javax.annotation.Resource;
+import java.util.List;
 
 @Transactional
 @Service("userImpl")
@@ -23,6 +24,11 @@ public class UserImpl implements UserInterface{
                 User user=new User();
                 user=userDaoImpl.getUserByAccountIdAndPsw(accountId,password);
                 return user;
+        }
+
+        public List<User> findByAccountId(String accountId){
+                return this.userDaoImpl.findByaccountId(accountId);
+
         }
 
         public void add(User user){

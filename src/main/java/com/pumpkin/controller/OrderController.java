@@ -2,6 +2,7 @@ package com.pumpkin.controller;
 
 import com.pumpkin.entity.Order;
 import com.pumpkin.service.impl.OrderImpl;
+import com.pumpkin.util.RandomUtil;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
@@ -21,9 +22,12 @@ public class OrderController {
                 this.orderImpl = orderImpl;
         }
 
+
+        //下订单
         @RequestMapping("/addOrder")
         public ModelAndView add(HttpServletRequest request){
-            ModelAndView modelAndView=new ModelAndView();
+                ModelAndView modelAndView=new ModelAndView();
+                String busId=RandomUtil.getRandomNickname(10);
                 String goodsName=request.getParameter("goodsName");
                 String goodsId=request.getParameter("goodsId");
                 String goodsPrice=request.getParameter("goodsPrice");
@@ -31,6 +35,10 @@ public class OrderController {
                 String count=request.getParameter("quantity");
                 Integer countInt=Integer.parseInt(count);
                 Double allPrice=countInt*goodsPriceDouble;
+                String accountId=request.getParameter("accountId");
+                String phone=request.getParameter("phone");
+                Integer phoneInteger=Integer.parseInt(phone);
+                String address=request.getParameter("address");
 
                 Order order=new Order();
                 order.setGoodsName(goodsName);
@@ -39,6 +47,10 @@ public class OrderController {
                 order.setCount(countInt);
                 order.setCreateTime(new Date());
                 order.setStatus(1);
+                order.setAccountId(accountId);
+                order.setBusId(busId);
+                order.setPhone(phoneInteger);
+                order.setAddress(address);
                 orderImpl.add(order);
                 return modelAndView;
         }
