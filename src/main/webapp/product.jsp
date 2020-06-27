@@ -1283,7 +1283,7 @@
 
 			<!--Middle Part Start-->
 			<div id="content" class="col-md-9 col-sm-8">
-				
+                <form method="post" action="/order/addOrder">
 				<div class="product-view row">
 					<div class="left-content-product">
 				
@@ -1313,7 +1313,7 @@
 							
 						</div>
 
-                        <form method="post" action="/order/addOrder">
+
 
 
 
@@ -1443,7 +1443,7 @@
 							<!-- end box info product -->
 
 						</div>
-                        </form>
+                        <%--</form>--%>
 					</div>
 				</div>
 				<!-- Product Tabs -->
@@ -1460,7 +1460,7 @@
 								<p>${merchandise.describe}</p>
 							</div>
 							<div id="tab-review" class="tab-pane fade">
-								<form>
+								<%--<form>--%>
 									<div id="review">
 										<table class="table table-striped table-bordered">
 											<tbody>
@@ -1486,32 +1486,36 @@
 										</table>
 										<div class="text-right"></div>
 									</div>
-									<h2 id="review-title">Write a review</h2>
+									<h2 id="review-title">我的地址</h2>
 									<div class="contacts-form">
-										<div class="form-group"> <span class="icon icon-user"></span>
-											<input type="text" name="name" class="form-control" value="Your Name" onblur="if (this.value == '') {this.value = 'Your Name';}" onfocus="if(this.value == 'Your Name') {this.value = '';}"> 
-										</div>
-										<div class="form-group"> <span class="icon icon-bubbles-2"></span>
-											<textarea class="form-control" name="text" onblur="if (this.value == '') {this.value = 'Your Review';}" onfocus="if(this.value == 'Your Review') {this.value = '';}">Your Review</textarea>
-										</div> 
-										<span style="font-size: 11px;"><span class="text-danger">Note:</span>						HTML is not translated!</span>
-										
-										<div class="form-group">
-										 <b>Rating</b> <span>Bad</span>&nbsp;
-										<input type="radio" name="rating" value="1"> &nbsp;
-										<input type="radio" name="rating"
-										value="2"> &nbsp;
-										<input type="radio" name="rating"
-										value="3"> &nbsp;
-										<input type="radio" name="rating"
-										value="4"> &nbsp;
-										<input type="radio" name="rating"
-										value="5"> &nbsp;<span>Good</span>
-										
-										</div>
-										<div class="buttons clearfix"><a id="button-review" class="btn buttonGray">Continue</a></div>
+                                        <div class="form-group"> <span class="icon icon-user"></span>
+                                            <input type="text" name="address" class="form-control" value="请输入地址" onblur="if (this.value == '') {this.value = '请输入地址';}" onfocus="if(this.value == 'Your Name') {this.value = '';}">
+                                        </div>
+
+										<%--<div class="form-group"> <span class="icon icon-user"></span>--%>
+											<%--<input type="text" name="name" class="form-control" value="Your Name" onblur="if (this.value == '') {this.value = 'Your Name';}" onfocus="if(this.value == 'Your Name') {this.value = '';}"> --%>
+										<%--</div>--%>
+										<%--<div class="form-group"> <span class="icon icon-bubbles-2"></span>--%>
+											<%--<textarea class="form-control" name="text" onblur="if (this.value == '') {this.value = 'Your Review';}" onfocus="if(this.value == 'Your Review') {this.value = '';}">Your Review</textarea>--%>
+										<%--</div> --%>
+										<%--<span style="font-size: 11px;"><span class="text-danger">Note:</span>						HTML is not translated!</span>--%>
+										<%----%>
+										<%--<div class="form-group">--%>
+										 <%--<b>Rating</b> <span>Bad</span>&nbsp;--%>
+										<%--<input type="radio" name="rating" value="1"> &nbsp;--%>
+										<%--<input type="radio" name="rating"--%>
+										<%--value="2"> &nbsp;--%>
+										<%--<input type="radio" name="rating"--%>
+										<%--value="3"> &nbsp;--%>
+										<%--<input type="radio" name="rating"--%>
+										<%--value="4"> &nbsp;--%>
+										<%--<input type="radio" name="rating"--%>
+										<%--value="5"> &nbsp;<span>Good</span>--%>
+										<%----%>
+										<%--</div>--%>
+										<%--<div class="buttons clearfix"><a id="button-review" class="btn buttonGray">Continue</a></div>--%>
 									</div>
-								</form>
+								<%--</form>--%>
 							</div>
 							<div id="tab-4" class="tab-pane fade">
 								<a href="#">Monitor</a>,
@@ -1554,7 +1558,11 @@
 						</div>
 					</div>
 				</div>
-                <%--</form>--%>
+
+
+
+                    </form>
+
 				<!-- //Product Tabs -->
 				<!-- Related Products -->
     			<div class="related titleLine products-list grid module ">
