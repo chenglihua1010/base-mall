@@ -24,7 +24,7 @@ public class OrderController {
         public ModelAndView add(HttpServletRequest request){
             ModelAndView modelAndView=new ModelAndView();
                 String goodsName=request.getParameter("goodsName");
-
+                String goodsId=request.getParameter("goodsId");
                 Order order=new Order();
                 order.setGoodsName(goodsName);
                 orderImpl.add(order);

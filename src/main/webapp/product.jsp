@@ -1311,6 +1311,10 @@
 							
 						</div>
 
+                        <form method="post" action="/order/addOrder">
+
+
+
 						<div class="content-product-right col-md-7 col-sm-12 col-xs-12">
 							<div class="title-product">
 								<h1>${merchandise.goodsName}</h1>
@@ -1328,7 +1332,7 @@
 								</div>
 
 								<a class="reviews_button" href="" onclick="$('a[href=\'#tab-review\']').trigger('click'); return false;">评价总数：${merchandise.evacount}</a>	|
-								<a class="write_review_button" href="" onclick="$('a[href=\'#tab-review\']').trigger('click'); return false;">购买总数：${merchandise.pruchaseCount}</a>
+								<a class="write_review_button" href="" onclick="$('a[href=\'#tab-review\']').trigger('click'); return false;">购买总数：${merchandise.purchaseCount}</a>
 							</div>
 
 							<div class="product-label form-group">
@@ -1336,7 +1340,7 @@
 									<span class="price-new" itemprop="price">${merchandise.goodsPrice}</span>
 									<span class="price-old">$122.00</span>
 								</div>
-								<div class="stock"><span>Availability:</span> <span class="status-stock">In Stock</span></div>
+								<%--<div class="stock"><span>Availability:</span> <span class="status-stock">In Stock</span></div>--%>
 							</div>
 
 							<div class="product-box-desc">
@@ -1402,7 +1406,7 @@
 								<div class="form-group box-info-product">
 									<div class="option quantity">
 										<div class="input-group quantity-control" unselectable="on" style="-webkit-user-select: none;">
-											<label>Qty</label>
+											<label>数量</label>
 											<input class="form-control" type="text" name="quantity"
 											value="1">
 											<input type="hidden" name="product_id" value="50">
@@ -1411,7 +1415,8 @@
 										</div>
 									</div>
 									<div class="cart">
-										<input type="button" data-toggle="tooltip" title="" value="Add to Cart" data-loading-text="Loading..." id="button-cart" class="btn btn-mega btn-lg" onclick="cart.add('42', '1');" data-original-title="Add to Cart">
+                                        <input type="hidden" name="goodsId" value="${merchandise.goodsId}">
+										<input type="submit" data-toggle="tooltip" title="" value="提交订单" data-loading-text="Loading..." id="button-cart" class="btn btn-mega btn-lg" onclick="cart.add('42', '1');" data-original-title="Add to Cart">
 									</div>
 									<div class="add-to-links wish_comp">
 										<ul class="blank list-inline">
@@ -1434,7 +1439,7 @@
 							<!-- end box info product -->
 
 						</div>
-				
+                        </form>
 					</div>
 				</div>
 				<!-- Product Tabs -->
@@ -1449,50 +1454,6 @@
 						<div class="tab-content col-lg-10 col-sm-9 col-xs-12">
 							<div id="tab-1" class="tab-pane fade active in">
 								<p>${merchandise.describe}</p>
-								<h3>
-									Features:</h3>
-								<p>
-									Unrivaled display performance</p>
-								<ul>
-									<li>
-										30-inch (viewable) active-matrix liquid crystal display provides breathtaking image quality and vivid, richly saturated color.</li>
-									<li>
-										Support for 2560-by-1600 pixel resolution for display of high definition still and video imagery.</li>
-									<li>
-										Wide-format design for simultaneous display of two full pages of text and graphics.</li>
-									<li>
-										Industry standard DVI connector for direct attachment to Mac- and Windows-based desktops and notebooks</li>
-									<li>
-										Incredibly wide (170 degree) horizontal and vertical viewing angle for maximum visibility and color performance.</li>
-									<li>
-										Lightning-fast pixel response for full-motion digital video playback.</li>
-									<li>
-										Support for 16.7 million saturated colors, for use in all graphics-intensive applications.</li>
-								</ul>
-								<p>
-									Simple setup and operation</p>
-								<ul>
-									<li>
-										Single cable with elegant breakout for connection to DVI, USB and FireWire ports</li>
-									<li>
-										Built-in two-port USB 2.0 hub for easy connection of desktop peripheral devices.</li>
-									<li>
-										Two FireWire 400 ports to support iSight and other desktop peripherals</li>
-								</ul>
-								<p>
-									Sleek, elegant design</p>
-								<ul>
-									<li>
-										Huge virtual workspace, very small footprint.</li>
-									<li>
-										Narrow Bezel design to minimize visual impact of using dual displays</li>
-									<li>
-										Unique hinge design for effortless adjustment</li>
-									<li>
-										Support for VESA mounting solutions (Apple Cinema Display VESA Mount Adapter sold separately)</li>
-								</ul>
-								
-								
 							</div>
 							<div id="tab-review" class="tab-pane fade">
 								<form>
@@ -1589,8 +1550,8 @@
 						</div>
 					</div>
 				</div>
+                <%--</form>--%>
 				<!-- //Product Tabs -->
-
 				<!-- Related Products -->
     			<div class="related titleLine products-list grid module ">
     				<h3 class="modtitle">Related Products  </h3>

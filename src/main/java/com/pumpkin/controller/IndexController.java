@@ -133,6 +133,8 @@ public class IndexController {
                 modelAndView.setViewName("product");
                 return modelAndView;
         }
+
+        //根据商品名称查找
         @RequestMapping("/findByGn")
         public ModelAndView findByGn(String goodsName){
                 List<Merchandise> merchandiseList=merchandiseImpl.findByGn(goodsName);
