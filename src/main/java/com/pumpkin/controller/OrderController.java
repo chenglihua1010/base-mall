@@ -29,7 +29,7 @@ public class OrderController {
                 String goodsPrice=request.getParameter("goodsPrice");
                 Double goodsPriceDouble=Double.parseDouble(goodsPrice);
                 String count=request.getParameter("quantity");
-                Integer countInt=Integer.parseInt("count");
+                Integer countInt=Integer.parseInt(count);
                 Double allPrice=countInt*goodsPriceDouble;
 
                 Order order=new Order();
