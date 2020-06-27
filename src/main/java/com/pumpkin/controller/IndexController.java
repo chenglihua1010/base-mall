@@ -1,6 +1,7 @@
 package com.pumpkin.controller;
 
 import com.pumpkin.entity.Merchandise;
+import com.pumpkin.entity.Order;
 import com.pumpkin.service.impl.MerchandiseImpl;
 import org.hibernate.query.Query;
 import org.springframework.stereotype.Component;
@@ -13,6 +14,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.annotation.Resource;
+import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 
 @Controller
@@ -126,7 +128,9 @@ public class IndexController {
                 return modelAndView;
         }
         @RequestMapping("/findByGI")
-        public ModelAndView findByGI(@RequestParam String goodsId) {
+        public ModelAndView findByGI(HttpServletRequest request) {
+                String goodsId=request.getParameter("goodsId");
+                String accountId=request.getParameter("accountId");
                 List<Merchandise> merchandisesList = merchandiseImpl.findByGI(goodsId);
                 ModelAndView modelAndView=new ModelAndView();
                 modelAndView.addObject("merchandise",merchandisesList.get(0));

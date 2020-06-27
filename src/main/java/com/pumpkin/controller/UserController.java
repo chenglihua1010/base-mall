@@ -90,7 +90,6 @@ public class UserController {
                 }else{
                         modelAndView.setViewName("index");
                         modelAndView.addObject("user",user);
-
                         List<Merchandise> merchandiseList= merchandiseImpl.findAllpumpkin();
                         modelAndView.addObject("merchandiseList",merchandiseList);
 //                        modelAndView.addObject("merchandise0",merchandiseList.get(0));
