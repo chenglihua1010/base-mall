@@ -22,11 +22,12 @@ public class OrderController {
 
         @RequestMapping("/addOrder")
         public ModelAndView add(HttpServletRequest request){
+            ModelAndView modelAndView=new ModelAndView();
                 String goodsName=request.getParameter("goodsName");
 
                 Order order=new Order();
                 order.setGoodsName(goodsName);
                 orderImpl.add(order);
-
+                return modelAndView;
         }
 }

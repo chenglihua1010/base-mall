@@ -69,6 +69,12 @@
     <bean id="userDaoImpl" class="com.pumpkin.dao.impl.UserDaoImpl">
         <property name="sessionFactory" ref="sessionFactory" />
     </bean>
+
+    <bean id="orderImpl" class="com.pumpkin.dao.impl.OrderDaoImpl">
+        <property name="sessionFactory" ref="sessionFactory" />
+    </bean>
+
+
     <!--<bean id="baseDaoImpl" class="com.pumpkin.dao.impl.BaseDaoImpl">-->
         <!--<property name="sessionFactory" ref="sessionFactory" />-->
     <!--</bean>-->

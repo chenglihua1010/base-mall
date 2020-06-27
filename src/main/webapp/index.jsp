@@ -203,16 +203,16 @@
                                             <tbody>
                                                 <tr>
                                                     <td class="text-center" style="width:70px">
-                                                        <a href="product.html">
+                                                        <a href="product.jsp">
                                                             <img src="image/catalog/demo/product/80/1.jpg" style="width:70px" alt="Yutculpa ullamcon" title="Yutculpa ullamco" class="preview">
                                                         </a>
                                                     </td>
-                                                    <td class="text-left"> <a class="cart_product_name" href="product.html">Yutculpa ullamco</a> 
+                                                    <td class="text-left"> <a class="cart_product_name" href="product.jsp">Yutculpa ullamco</a>
                                                     </td>
                                                     <td class="text-center">x1</td>
                                                     <td class="text-center">$80.00</td>
                                                     <td class="text-right">
-                                                        <a href="product.html" class="fa fa-edit"></a>
+                                                        <a href="product.jsp" class="fa fa-edit"></a>
                                                     </td>
                                                     <td class="text-right">
                                                         <a onclick="cart.remove('2');" class="fa fa-times fa-delete"></a>
@@ -220,16 +220,16 @@
                                                 </tr>
                                                 <tr>
                                                     <td class="text-center" style="width:70px">
-                                                        <a href="product.html">
+                                                        <a href="product.jsp">
                                                             <img src="image/catalog/demo/product/80/2.jpg" style="width:70px" alt="Xancetta bresao" title="Xancetta bresao" class="preview">
                                                         </a>
                                                     </td>
-                                                    <td class="text-left"> <a class="cart_product_name" href="product.html">Xancetta bresao</a> 
+                                                    <td class="text-left"> <a class="cart_product_name" href="product.jsp">Xancetta bresao</a>
                                                     </td>
                                                     <td class="text-center">x1</td>
                                                     <td class="text-center">$60.00</td>
                                                     <td class="text-right">
-                                                        <a href="product.html" class="fa fa-edit"></a>
+                                                        <a href="product.jsp" class="fa fa-edit"></a>
                                                     </td>
                                                     <td class="text-right">
                                                         <a onclick="cart.remove('1');" class="fa fa-times fa-delete"></a>
@@ -825,7 +825,7 @@
                                                                             <a href="#" class="title-submenu">Product pages</a>
                                                                             <div>
                                                                                 <ul class="row-list">
-                                                                                    <li><a href="product.html">Product page 1</a></li>
+                                                                                    <li><a href="product.jsp">Product page 1</a></li>
                                                                                     <li><a href="#">Product page 2</a></li>
                                                                                     <!-- <li><a href="product-v3.html">Image size - small</a></li> -->
                                                                                 </ul>
@@ -1083,7 +1083,7 @@
                                             <div class="product-layout item-inner style1 ">
                                                 <div class="item-image">
                                                     <div class="item-img-info">
-                                                        <a href="product.html" target="_self" title="Mandouille short ">
+                                                        <a href="product.jsp" target="_self" title="Mandouille short ">
                                                             <img src="image/catalog/demo/product/80/1.jpg" alt="Mandouille short">
                                                             </a>
                                                     </div>
@@ -1091,7 +1091,7 @@
                                                 </div>
                                                 <div class="item-info">
                                                     <div class="item-title">
-                                                        <a href="product.html" target="_self" title="Mandouille short">Mandouille short </a>
+                                                        <a href="product.jsp" target="_self" title="Mandouille short">Mandouille short </a>
                                                     </div>
                                                     <div class="rating">
                                                         <span class="fa fa-stack"><i class="fa fa-star fa-stack-2x"></i></span>
@@ -1114,7 +1114,7 @@
                                             <div class="product-layout item-inner style1 ">
                                                 <div class="item-image">
                                                     <div class="item-img-info">
-                                                        <a href="product.html" target="_self" title="Xancetta bresao ">
+                                                        <a href="product.jsp" target="_self" title="Xancetta bresao ">
                                                                 <img src="image/catalog/demo/product/80/2.jpg" alt="Xancetta bresao">
                                                                 </a>
                                                     </div>
@@ -1122,7 +1122,7 @@
                                                 </div>
                                                 <div class="item-info">
                                                     <div class="item-title">
-                                                        <a href="product.html" target="_self" title="Xancetta bresao">
+                                                        <a href="product.jsp" target="_self" title="Xancetta bresao">
                                                                     Xancetta bresao 
                                                                 </a>
                                                     </div>
@@ -1149,7 +1149,7 @@
                                             <div class="product-layout item-inner style1 ">
                                                 <div class="item-image">
                                                     <div class="item-img-info">
-                                                        <a href="product.html" target="_self" title="Sausage cowbee ">
+                                                        <a href="product.jsp" target="_self" title="Sausage cowbee ">
                                                                     <img src="image/catalog/demo/product/80/3.jpg" alt="Sausage cowbee">
                                                                     </a>
                                                     </div>
@@ -1157,7 +1157,7 @@
                                                 </div>
                                                 <div class="item-info">
                                                     <div class="item-title">
-                                                        <a href="product.html" target="_self" title="Sausage cowbee">
+                                                        <a href="product.jsp" target="_self" title="Sausage cowbee">
                                                                     Sausage cowbee 
                                                                 </a>
                                                     </div>
@@ -1437,12 +1437,12 @@
                                     <div class="product-layout item-inner style1 ">
                                         <div class="item-image">
                                             <div class="item-img-info">
-                                                <a href="product.html" target="_self" title="Mandouille short "><img src="image/catalog/demo/product/80/5.jpg" alt="Mandouille short"></a>
+                                                <a href="product.jsp" target="_self" title="Mandouille short "><img src="image/catalog/demo/product/80/5.jpg" alt="Mandouille short"></a>
                                             </div>                                        
                                         </div>
                                         <div class="item-info">
                                             <div class="item-title">
-                                                <a href="product.html" target="_self" title="Mandouille short">Mandouille short </a>
+                                                <a href="product.jsp" target="_self" title="Mandouille short">Mandouille short </a>
                                             </div>
                                             <div class="rating">
                                                 <span class="fa fa-stack"><i class="fa fa-star fa-stack-2x"></i></span>
@@ -1465,13 +1465,13 @@
                                     <div class="product-layout item-inner style1 ">
                                         <div class="item-image">
                                             <div class="item-img-info">
-                                                <a href="product.html" target="_self" title="Xancetta bresao "><img src="image/catalog/demo/product/80/3.jpg" alt="Xancetta bresao"></a>
+                                                <a href="product.jsp" target="_self" title="Xancetta bresao "><img src="image/catalog/demo/product/80/3.jpg" alt="Xancetta bresao"></a>
                                             </div>
                                             
                                         </div>
                                         <div class="item-info">
                                             <div class="item-title">
-                                                <a href="product.html" target="_self" title="Xancetta bresao">Xancetta bresao</a>
+                                                <a href="product.jsp" target="_self" title="Xancetta bresao">Xancetta bresao</a>
                                             </div>
                                             <div class="rating">
                                                 <span class="fa fa-stack"><i class="fa fa-star fa-stack-2x"></i></span>
@@ -1496,13 +1496,13 @@
                                     <div class="product-layout item-inner style1 ">
                                         <div class="item-image">
                                             <div class="item-img-info">
-                                                <a href="product.html" target="_self" title="Sausage cowbee "><img src="image/catalog/demo/product/80/4.jpg" alt="Sausage cowbee"></a>
+                                                <a href="product.jsp" target="_self" title="Sausage cowbee "><img src="image/catalog/demo/product/80/4.jpg" alt="Sausage cowbee"></a>
                                             </div>
                                            
                                         </div>
                                         <div class="item-info">
                                             <div class="item-title">
-                                                <a href="product.html" target="_self" title="Sausage cowbee">Sausage cowbee</a>
+                                                <a href="product.jsp" target="_self" title="Sausage cowbee">Sausage cowbee</a>
                                             </div>
                                             <div class="rating">
                                                 <span class="fa fa-stack"><i class="fa fa-star fa-stack-2x"></i></span>
@@ -1523,13 +1523,13 @@
                                     <div class="product-layout item-inner style1 ">
                                         <div class="item-image">
                                             <div class="item-img-info">
-                                                <a href="product.html" target="_self" title="Chicken swinesha "><img src="image/catalog/demo/product/80/7.jpg" alt="Chicken swinesha"></a>
+                                                <a href="product.jsp" target="_self" title="Chicken swinesha "><img src="image/catalog/demo/product/80/7.jpg" alt="Chicken swinesha"></a>
                                             </div>
                                            
                                         </div>
                                         <div class="item-info">
                                             <div class="item-title">
-                                                <a href="product.html" target="_self" title="Chicken swinesha">
+                                                <a href="product.jsp" target="_self" title="Chicken swinesha">
                                                             Chicken swinesha 
                                                         </a>
                                             </div>
@@ -1807,7 +1807,7 @@
                                             <div class="left-block left-b">
                                                 
                                                 <div class="product-image-container second_img">
-                                                    <a href="product.html" target="_self" title="Duis aute irure ">
+                                                    <a href="product.jsp" target="_self" title="Duis aute irure ">
                                                         <img src="image/catalog/demo/product/270/e10.jpg" class="img-1 img-responsive" alt="image1">
                                                         <img src="image/catalog/demo/product/270/e7.jpg" class="img-2 img-responsive" alt="image2">
                                                     </a>
@@ -1838,7 +1838,7 @@
                                                         <span class="fa fa-stack"><i class="fa fa-star fa-stack-2x"></i></span>
                                                         <span class="fa fa-stack"><i class="fa fa-star fa-stack-2x"></i></span>
                                                     </div>
-                                                    <h4><a href="product.html" title="Pastrami bacon" target="_self">Duis aute irure </a></h4>
+                                                    <h4><a href="product.jsp" title="Pastrami bacon" target="_self">Duis aute irure </a></h4>
                                                     
                                                 </div>
                                                 <p class="price">
@@ -1858,7 +1858,7 @@
                                             <div class="left-block left-b">
                                                 
                                                 <div class="product-image-container second_img">
-                                                    <a href="product.html" target="_self" title="Excepteur sint occ">
+                                                    <a href="product.jsp" target="_self" title="Excepteur sint occ">
                                                         <img src="image/catalog/demo/product/270/f5.jpg" class="img-1 img-responsive" alt="image1">
                                                         <img src="image/catalog/demo/product/270/f6.jpg" class="img-2 img-responsive" alt="image2">
                                                     </a>
@@ -1889,7 +1889,7 @@
                                                         <span class="fa fa-stack"><i class="fa fa-star fa-stack-2x"></i></span>
                                                         <span class="fa fa-stack"><i class="fa fa-star fa-stack-2x"></i></span>
                                                     </div>
-                                                    <h4><a href="product.html" title="Pastrami bacon" target="_self">Excepteur sint occ</a></h4>
+                                                    <h4><a href="product.jsp" title="Pastrami bacon" target="_self">Excepteur sint occ</a></h4>
                                                     
                                                 </div>
                                                 <p class="price">
@@ -1908,7 +1908,7 @@
                                             <div class="left-block left-b">
                                                
                                                 <div class="product-image-container second_img">
-                                                    <a href="product.html" target="_self" title="Cenison meatloa">
+                                                    <a href="product.jsp" target="_self" title="Cenison meatloa">
                                                         <img src="image/catalog/demo/product/270/e3.jpg" class="img-1 img-responsive" alt="image1">
                                                         <img src="image/catalog/demo/product/270/e4.jpg" class="img-2 img-responsive" alt="image2">
                                                     </a>
@@ -1939,7 +1939,7 @@
                                                         <span class="fa fa-stack"><i class="fa fa-star fa-stack-2x"></i></span>
                                                         <span class="fa fa-stack"><i class="fa fa-star fa-stack-2x"></i></span>
                                                     </div>
-                                                    <h4><a href="product.html" title="Pastrami bacon" target="_self">Cenison meatloa</a></h4>
+                                                    <h4><a href="product.jsp" title="Pastrami bacon" target="_self">Cenison meatloa</a></h4>
                                                     
                                                 </div>
                                                 <p class="price">$42.00</p>
@@ -2072,7 +2072,7 @@
                             <c:forEach items="${merchandiseList}" var="merchandise">
 
                                 <li>
-                                        <a href="#"><img src="${merchandise.imgs}" alt="${merchandise.goodsName}" >${merchandise.goodsName}</a>
+                                        <a href="/index/findById?id=${merchandise.id}"><img src="${merchandise.imgs}" alt="${merchandise.goodsName}" >${merchandise.goodsName}</a>
 
                                 </li>
 
@@ -2113,7 +2113,7 @@
                                                     <span class="label-product label-sale">-11%</span>
                                                 </div>
                                                 <div class="product-image-container second_img">
-                                                    <a href="product.html" target="_self" title="Pastrami bacon">
+                                                    <a href="product.jsp" target="_self" title="Pastrami bacon">
                                                         <img src="image/catalog/demo/product/270/h1.jpg" class="img-1 img-responsive" alt="image1">
                                                         <img src="image/catalog/demo/product/270/h2.jpg" class="img-2 img-responsive" alt="image2">
                                                     </a>
@@ -2147,7 +2147,7 @@
                                                         </div>
                                                         <span class="rating-num">( 2 )</span>
                                                     </div>
-                                                    <h4><a href="product.html" title="Pastrami bacon" target="_self">Pastrami bacon</a></h4>
+                                                    <h4><a href="product.jsp" title="Pastrami bacon" target="_self">Pastrami bacon</a></h4>
                                                     
                                                 </div>
                                                 <p class="price">
@@ -2174,7 +2174,7 @@
                                                     <span class="label-product label-sale">-15%</span>
                                                 </div>
                                                 <div class="product-image-container second_img">
-                                                    <a href="product.html" target="_self" title="Lommodo quiutvenia">
+                                                    <a href="product.jsp" target="_self" title="Lommodo quiutvenia">
                                                         <img src="image/catalog/demo/product/270/f1.jpg" class="img-1 img-responsive" alt="image1">
                                                         <img src="image/catalog/demo/product/270/f2.jpg" class="img-2 img-responsive" alt="image2">
                                                     </a>
@@ -2208,7 +2208,7 @@
                                                         </div>
                                                         <span class="rating-num">( 3 )</span>
                                                     </div>
-                                                    <h4><a href="product.html" title="Pastrami bacon" target="_self">Lommodo quiutvenia</a></h4>
+                                                    <h4><a href="product.jsp" title="Pastrami bacon" target="_self">Lommodo quiutvenia</a></h4>
                                                     
                                                 </div>
                                                 <p class="price">
@@ -2235,7 +2235,7 @@
                                                     <span class="label-product label-sale">-12%</span>
                                                 </div>
                                                 <div class="product-image-container second_img">
-                                                    <a href="product.html" target="_self" title="Mapicola incidid">
+                                                    <a href="product.jsp" target="_self" title="Mapicola incidid">
                                                         <img src="image/catalog/demo/product/270/fu1.jpg" class="img-1 img-responsive" alt="image1">
                                                         <img src="image/catalog/demo/product/270/fu2.jpg" class="img-2 img-responsive" alt="image2">
                                                     </a>
@@ -2269,7 +2269,7 @@
                                                         </div>
                                                         <span class="rating-num">( 1 )</span>
                                                     </div>
-                                                    <h4><a href="product.html" title="Pastrami bacon" target="_self">Mapicola incidid</a></h4>
+                                                    <h4><a href="product.jsp" title="Pastrami bacon" target="_self">Mapicola incidid</a></h4>
                                                     
                                                 </div>
                                                 <p class="price">
@@ -2296,7 +2296,7 @@
                                                     <span class="label-product label-sale">-8%</span>
                                                 </div>
                                                 <div class="product-image-container second_img">
-                                                    <a href="product.html" target="_self" title="Duis aute irure">
+                                                    <a href="product.jsp" target="_self" title="Duis aute irure">
                                                         <img src="image/catalog/demo/product/270/f3.jpg" class="img-1 img-responsive" alt="image1">
                                                         <img src="image/catalog/demo/product/270/f4.jpg" class="img-2 img-responsive" alt="image2">
                                                     </a>
@@ -2330,7 +2330,7 @@
                                                         </div>
                                                         <span class="rating-num">( 5 )</span>
                                                     </div>
-                                                    <h4><a href="product.html" title="Pastrami bacon" target="_self">Duis aute irure </a></h4>
+                                                    <h4><a href="product.jsp" title="Pastrami bacon" target="_self">Duis aute irure </a></h4>
                                                     
                                                 </div>
                                                 <p class="price">
@@ -2357,7 +2357,7 @@
                                                     <span class="label-product label-sale">-10%</span>
                                                 </div>
                                                 <div class="product-image-container second_img">
-                                                    <a href="product.html" target="_self" title="Excepteur sint occ">
+                                                    <a href="product.jsp" target="_self" title="Excepteur sint occ">
                                                         <img src="image/catalog/demo/product/270/e1.jpg" class="img-1 img-responsive" alt="image1">
                                                         <img src="image/catalog/demo/product/270/e2.jpg" class="img-2 img-responsive" alt="image2">
                                                     </a>
@@ -2391,7 +2391,7 @@
                                                         </div>
                                                         <span class="rating-num">( 2 )</span>
                                                     </div>
-                                                    <h4><a href="product.html" title="Pastrami bacon" target="_self">Excepteur sint occ</a></h4>
+                                                    <h4><a href="product.jsp" title="Pastrami bacon" target="_self">Excepteur sint occ</a></h4>
                                                     
                                                 </div>
                                                 <p class="price">
@@ -2418,7 +2418,7 @@
                                                     <span class="label-product label-sale">-11%</span>
                                                 </div>
                                                 <div class="product-image-container second_img">
-                                                    <a href="product.html" target="_self" title="Cenison meatloa">
+                                                    <a href="product.jsp" target="_self" title="Cenison meatloa">
                                                         <img src="image/catalog/demo/product/270/h3.jpg" class="img-1 img-responsive" alt="image1">
                                                         <img src="image/catalog/demo/product/270/h4.jpg" class="img-2 img-responsive" alt="image2">
                                                     </a>
@@ -2452,7 +2452,7 @@
                                                         </div>
                                                         <span class="rating-num">( 1 )</span>
                                                     </div>
-                                                    <h4><a href="product.html" title="Pastrami bacon" target="_self">Cenison meatloa</a></h4>
+                                                    <h4><a href="product.jsp" title="Pastrami bacon" target="_self">Cenison meatloa</a></h4>
                                                     
                                                 </div>
                                                 <p class="price">
@@ -2479,7 +2479,7 @@
                                                     <span class="label-product label-sale">-9%</span>
                                                 </div>
                                                 <div class="product-image-container second_img">
-                                                    <a href="product.html" target="_self" title="Ninim spareri sed">
+                                                    <a href="product.jsp" target="_self" title="Ninim spareri sed">
                                                         <img src="image/catalog/demo/product/270/e3.jpg" class="img-1 img-responsive" alt="image1">
                                                         <img src="image/catalog/demo/product/270/e4.jpg" class="img-2 img-responsive" alt="image2">
                                                     </a>
@@ -2513,7 +2513,7 @@
                                                         </div>
                                                         <span class="rating-num">( 3 )</span>
                                                     </div>
-                                                    <h4><a href="product.html" title="Pastrami bacon" target="_self">Ninim spareri sed</a></h4>
+                                                    <h4><a href="product.jsp" title="Pastrami bacon" target="_self">Ninim spareri sed</a></h4>
                                                     
                                                 </div>
                                                 <p class="price">
@@ -2582,7 +2582,7 @@
                                                 <div class="left-block left-b">
                                                     
                                                     <div class="product-image-container second_img">
-                                                        <a href="product.html" target="_self" title="Lastrami bacon">
+                                                        <a href="product.jsp" target="_self" title="Lastrami bacon">
                                                             <img src="image/catalog/demo/product/270/e1.jpg" class="img-1 img-responsive" alt="image1">
                                                             <img src="image/catalog/demo/product/270/e10.jpg" class="img-2 img-responsive" alt="image2">
                                                         </a>
@@ -2616,7 +2616,7 @@
                                                             </div>
                                                             <span class="rating-num">( 2 )</span>
                                                         </div>
-                                                        <h4><a href="product.html" title="Pastrami bacon" target="_self">Lastrami bacon</a></h4>
+                                                        <h4><a href="product.jsp" title="Pastrami bacon" target="_self">Lastrami bacon</a></h4>
                                                         
                                                     </div>
                                                     <p class="price">
@@ -2637,7 +2637,7 @@
                                                         <span class="label-product label-sale">-15%</span>
                                                     </div>
                                                     <div class="product-image-container second_img">
-                                                        <a href="product.html" target="_self" title="Exceeur sint occaecat">
+                                                        <a href="product.jsp" target="_self" title="Exceeur sint occaecat">
                                                             <img src="image/catalog/demo/product/270/e2.jpg" class="img-1 img-responsive" alt="image1">
                                                             <img src="image/catalog/demo/product/270/e9.jpg" class="img-2 img-responsive" alt="image2">
                                                         </a>
@@ -2670,7 +2670,7 @@
                                                             </div>
                                                             <span class="rating-num">( 3 )</span>
                                                         </div>
-                                                        <h4><a href="product.html" title="Pastrami bacon" target="_self">Exceeur sint occaecat</a></h4>
+                                                        <h4><a href="product.jsp" title="Pastrami bacon" target="_self">Exceeur sint occaecat</a></h4>
                                                         
                                                     </div>
                                                     <p class="price">
@@ -2688,7 +2688,7 @@
                                                 <div class="left-block left-b">
                                                     
                                                     <div class="product-image-container second_img">
-                                                        <a href="product.html" target="_self" title="Mapicola incidid">
+                                                        <a href="product.jsp" target="_self" title="Mapicola incidid">
                                                             <img src="image/catalog/demo/product/270/e3.jpg" class="img-1 img-responsive" alt="image1">
                                                             <img src="image/catalog/demo/product/270/e8.jpg" class="img-2 img-responsive" alt="image2">
                                                         </a>
@@ -2722,7 +2722,7 @@
                                                             </div>
                                                             <span class="rating-num">( 5 )</span>
                                                         </div>
-                                                        <h4><a href="product.html" title="Pastrami bacon" target="_self">Mapicola incidid</a></h4>
+                                                        <h4><a href="product.jsp" title="Pastrami bacon" target="_self">Mapicola incidid</a></h4>
                                                         
                                                     </div>
                                                     <p class="price">
@@ -2742,7 +2742,7 @@
                                                         <span class="label-product label-new">New</span>
                                                     </div>
                                                     <div class="product-image-container second_img">
-                                                        <a href="product.html" target="_self" title="Duis aute irure ">
+                                                        <a href="product.jsp" target="_self" title="Duis aute irure ">
                                                             <img src="image/catalog/demo/product/270/e4.jpg" class="img-1 img-responsive" alt="image1">
                                                             <img src="image/catalog/demo/product/270/e7.jpg" class="img-2 img-responsive" alt="image2">
                                                         </a>
@@ -2776,7 +2776,7 @@
                                                             </div>
                                                             <span class="rating-num">( 2 )</span>
                                                         </div>
-                                                        <h4><a href="product.html" title="Pastrami bacon" target="_self">Duis aute irure </a></h4>
+                                                        <h4><a href="product.jsp" title="Pastrami bacon" target="_self">Duis aute irure </a></h4>
                                                         
                                                     </div>
                                                     <p class="price">
@@ -2794,7 +2794,7 @@
                                                 <div class="left-block left-b">
                                                     
                                                     <div class="product-image-container second_img">
-                                                        <a href="product.html" target="_self" title="Excepteur sint occ">
+                                                        <a href="product.jsp" target="_self" title="Excepteur sint occ">
                                                             <img src="image/catalog/demo/product/270/e5.jpg" class="img-1 img-responsive" alt="image1">
                                                             <img src="image/catalog/demo/product/270/e6.jpg" class="img-2 img-responsive" alt="image2">
                                                         </a>
@@ -2828,7 +2828,7 @@
                                                             </div>
                                                             <span class="rating-num">( 4 )</span>
                                                         </div>
-                                                        <h4><a href="product.html" title="Pastrami bacon" target="_self">Excepteur sint occ</a></h4>
+                                                        <h4><a href="product.jsp" title="Pastrami bacon" target="_self">Excepteur sint occ</a></h4>
                                                         
                                                     </div>
                                                     <p class="price">
@@ -2846,7 +2846,7 @@
                                                 <div class="left-block left-b">
                                                    
                                                     <div class="product-image-container second_img">
-                                                        <a href="product.html" target="_self" title="PCenison meatloa">
+                                                        <a href="product.jsp" target="_self" title="PCenison meatloa">
                                                             <img src="image/catalog/demo/product/270/e6.jpg" class="img-1 img-responsive" alt="image1">
                                                             <img src="image/catalog/demo/product/270/e2.jpg" class="img-2 img-responsive" alt="image2">
                                                         </a>
@@ -2880,7 +2880,7 @@
                                                             </div>
                                                             <span class="rating-num">( 6 )</span>
                                                         </div>
-                                                        <h4><a href="product.html" title="Pastrami bacon" target="_self">Cenison meatloa</a></h4>
+                                                        <h4><a href="product.jsp" title="Pastrami bacon" target="_self">Cenison meatloa</a></h4>
                                                         
                                                     </div>
                                                     <p class="price">$42.00</p>
@@ -2931,7 +2931,7 @@
                                                         <span class="label-product label-new">New</span>
                                                     </div>
                                                     <div class="product-image-container second_img">
-                                                        <a href="product.html" target="_self" title="Sunt inculpa qui">
+                                                        <a href="product.jsp" target="_self" title="Sunt inculpa qui">
                                                             <img src="image/catalog/demo/product/270/fu1.jpg" class="img-1 img-responsive" alt="image1">
                                                             <img src="image/catalog/demo/product/270/fu10.jpg" class="img-2 img-responsive" alt="image2">
                                                         </a>
@@ -2965,7 +2965,7 @@
                                                             </div>
                                                             <span class="rating-num">( 2 )</span>
                                                         </div>
-                                                        <h4><a href="product.html" title="Pastrami bacon" target="_self">Sunt inculpa qui</a></h4>
+                                                        <h4><a href="product.jsp" title="Pastrami bacon" target="_self">Sunt inculpa qui</a></h4>
                                                         
                                                     </div>
                                                     <p class="price">
@@ -2984,7 +2984,7 @@
                                                 <div class="left-block left-b">
                                                     
                                                     <div class="product-image-container second_img">
-                                                        <a href="product.html" target="_self" title="Chicken swinesha">
+                                                        <a href="product.jsp" target="_self" title="Chicken swinesha">
                                                             <img src="image/catalog/demo/product/270/fu2.jpg" class="img-1 img-responsive" alt="image1">
                                                             <img src="image/catalog/demo/product/270/fu9.jpg" class="img-2 img-responsive" alt="image2">
                                                         </a>
@@ -3017,7 +3017,7 @@
                                                             </div>
                                                             <span class="rating-num">( 2 )</span>
                                                         </div>
-                                                        <h4><a href="product.html" title="Pastrami bacon" target="_self">Chicken swinesha</a></h4>
+                                                        <h4><a href="product.jsp" title="Pastrami bacon" target="_self">Chicken swinesha</a></h4>
                                                         
                                                     </div>
                                                     <p class="price">
@@ -3037,7 +3037,7 @@
                                                         <span class="label-product label-sale">-10%</span>
                                                     </div>
                                                     <div class="product-image-container second_img">
-                                                        <a href="product.html" target="_self" title="Mapicola incidid">
+                                                        <a href="product.jsp" target="_self" title="Mapicola incidid">
                                                             <img src="image/catalog/demo/product/270/fu3.jpg" class="img-1 img-responsive" alt="image1">
                                                             <img src="image/catalog/demo/product/270/fu8.jpg" class="img-2 img-responsive" alt="image2">
                                                         </a>
@@ -3071,7 +3071,7 @@
                                                             </div>
                                                             <span class="rating-num">( 2 )</span>
                                                         </div>
-                                                        <h4><a href="product.html" title="Pastrami bacon" target="_self">Mapicola incidid</a></h4>
+                                                        <h4><a href="product.jsp" title="Pastrami bacon" target="_self">Mapicola incidid</a></h4>
                                                         
                                                     </div>
                                                     <p class="price">
@@ -3089,7 +3089,7 @@
                                                 <div class="left-block left-b">
                                                     
                                                     <div class="product-image-container second_img">
-                                                        <a href="product.html" target="_self" title="Dormd dea irure">
+                                                        <a href="product.jsp" target="_self" title="Dormd dea irure">
                                                             <img src="image/catalog/demo/product/270/fu4.jpg" class="img-1 img-responsive" alt="image1">
                                                             <img src="image/catalog/demo/product/270/fu7.jpg" class="img-2 img-responsive" alt="image2">
                                                         </a>
@@ -3123,7 +3123,7 @@
                                                             </div>
                                                             <span class="rating-num">( 2 )</span>
                                                         </div>
-                                                        <h4><a href="product.html" title="Pastrami bacon" target="_self">Dormd dea irure </a></h4>
+                                                        <h4><a href="product.jsp" title="Pastrami bacon" target="_self">Dormd dea irure </a></h4>
                                                         
                                                     </div>
                                                     <p class="price">
@@ -3141,7 +3141,7 @@
                                                 <div class="left-block left-b">
                                                     
                                                     <div class="product-image-container second_img">
-                                                        <a href="product.html" target="_self" title="Mecepteur sint rew">
+                                                        <a href="product.jsp" target="_self" title="Mecepteur sint rew">
                                                             <img src="image/catalog/demo/product/270/fu5.jpg" class="img-1 img-responsive" alt="image1">
                                                             <img src="image/catalog/demo/product/270/fu6.jpg" class="img-2 img-responsive" alt="image2">
                                                         </a>
@@ -3175,7 +3175,7 @@
                                                             </div>
                                                             <span class="rating-num">( 2 )</span>
                                                         </div>
-                                                        <h4><a href="product.html" title="Pastrami bacon" target="_self">Mecepteur sint rew</a></h4>
+                                                        <h4><a href="product.jsp" title="Pastrami bacon" target="_self">Mecepteur sint rew</a></h4>
                                                         
                                                     </div>
                                                     <p class="price">
@@ -3194,7 +3194,7 @@
                                                 <div class="left-block left-b">
                                                    
                                                     <div class="product-image-container second_img">
-                                                        <a href="product.html" target="_self" title="Sed ut perspicia">
+                                                        <a href="product.jsp" target="_self" title="Sed ut perspicia">
                                                             <img src="image/catalog/demo/product/270/fu6.jpg" class="img-1 img-responsive" alt="image1">
                                                             <img src="image/catalog/demo/product/270/fu2.jpg" class="img-2 img-responsive" alt="image2">
                                                         </a>
@@ -3228,7 +3228,7 @@
                                                             </div>
                                                             <span class="rating-num">( 1 )</span>
                                                         </div>
-                                                        <h4><a href="product.html" title="Pastrami bacon" target="_self">Sed ut perspicia</a></h4>
+                                                        <h4><a href="product.jsp" title="Pastrami bacon" target="_self">Sed ut perspicia</a></h4>
                                                         
                                                     </div>
                                                     <p class="price">$42.00</p>
@@ -3275,7 +3275,7 @@
                                                 <div class="left-block left-b">
                                                     
                                                     <div class="product-image-container second_img">
-                                                        <a href="product.html" target="_self" title="Lastrami bacon">
+                                                        <a href="product.jsp" target="_self" title="Lastrami bacon">
                                                             <img src="image/catalog/demo/product/270/f1.jpg" class="img-1 img-responsive" alt="image1">
                                                             <img src="image/catalog/demo/product/270/f7.jpg" class="img-2 img-responsive" alt="image2">
                                                         </a>
@@ -3309,7 +3309,7 @@
                                                             </div>
                                                             <span class="rating-num">( 3 )</span>
                                                         </div>
-                                                        <h4><a href="product.html" title="Pastrami bacon" target="_self">Lastrami bacon</a></h4>
+                                                        <h4><a href="product.jsp" title="Pastrami bacon" target="_self">Lastrami bacon</a></h4>
                                                         
                                                     </div>
                                                     <p class="price">
@@ -3330,7 +3330,7 @@
                                                         <span class="label-product label-sale">-15%</span>
                                                     </div>
                                                     <div class="product-image-container second_img">
-                                                        <a href="product.html" target="_self" title="Exceeur sint occaecat">
+                                                        <a href="product.jsp" target="_self" title="Exceeur sint occaecat">
                                                             <img src="image/catalog/demo/product/270/f2.jpg" class="img-1 img-responsive" alt="image1">
                                                             <img src="image/catalog/demo/product/270/f4.jpg" class="img-2 img-responsive" alt="image2">
                                                         </a>
@@ -3363,7 +3363,7 @@
                                                             </div>
                                                             <span class="rating-num">( 7 )</span>
                                                         </div>
-                                                        <h4><a href="product.html" title="Pastrami bacon" target="_self">Exceeur sint occaecat</a></h4>
+                                                        <h4><a href="product.jsp" title="Pastrami bacon" target="_self">Exceeur sint occaecat</a></h4>
                                                         
                                                     </div>
                                                     <p class="price">
@@ -3383,7 +3383,7 @@
                                                 <div class="left-block left-b">
                                                     
                                                     <div class="product-image-container second_img">
-                                                        <a href="product.html" target="_self" title="Mapicola incidid">
+                                                        <a href="product.jsp" target="_self" title="Mapicola incidid">
                                                             <img src="image/catalog/demo/product/270/f3.jpg" class="img-1 img-responsive" alt="image1">
                                                             <img src="image/catalog/demo/product/270/f8.jpg" class="img-2 img-responsive" alt="image2">
                                                         </a>
@@ -3417,7 +3417,7 @@
                                                             </div>
                                                             <span class="rating-num">( 2 )</span>
                                                         </div>
-                                                        <h4><a href="product.html" title="Pastrami bacon" target="_self">Mapicola incidid</a></h4>
+                                                        <h4><a href="product.jsp" title="Pastrami bacon" target="_self">Mapicola incidid</a></h4>
                                                         
                                                     </div>
                                                     <p class="price">
@@ -3439,7 +3439,7 @@
                                                         <span class="label-product label-new">New</span>
                                                     </div>
                                                     <div class="product-image-container second_img">
-                                                        <a href="product.html" target="_self" title="Duis aute irure ">
+                                                        <a href="product.jsp" target="_self" title="Duis aute irure ">
                                                             <img src="image/catalog/demo/product/270/f4.jpg" class="img-1 img-responsive" alt="image1">
                                                             <img src="image/catalog/demo/product/270/f7.jpg" class="img-2 img-responsive" alt="image2">
                                                         </a>
@@ -3473,7 +3473,7 @@
                                                             </div>
                                                             <span class="rating-num">( 8 )</span>
                                                         </div>
-                                                        <h4><a href="product.html" title="Pastrami bacon" target="_self">Duis aute irure </a></h4>
+                                                        <h4><a href="product.jsp" title="Pastrami bacon" target="_self">Duis aute irure </a></h4>
                                                         
                                                     </div>
                                                     <p class="price">
@@ -3493,7 +3493,7 @@
                                                 <div class="left-block left-b">
                                                     
                                                     <div class="product-image-container second_img">
-                                                        <a href="product.html" target="_self" title="Excepteur sint occ">
+                                                        <a href="product.jsp" target="_self" title="Excepteur sint occ">
                                                             <img src="image/catalog/demo/product/270/f5.jpg" class="img-1 img-responsive" alt="image1">
                                                             <img src="image/catalog/demo/product/270/f6.jpg" class="img-2 img-responsive" alt="image2">
                                                         </a>
@@ -3527,7 +3527,7 @@
                                                             </div>
                                                             <span class="rating-num">( 2 )</span>
                                                         </div>
-                                                        <h4><a href="product.html" title="Pastrami bacon" target="_self">Excepteur sint occ</a></h4>
+                                                        <h4><a href="product.jsp" title="Pastrami bacon" target="_self">Excepteur sint occ</a></h4>
                                                         
                                                     </div>
                                                     <p class="price">
@@ -3546,7 +3546,7 @@
                                                 <div class="left-block left-b">
                                                    
                                                     <div class="product-image-container second_img">
-                                                        <a href="product.html" target="_self" title="PCenison meatloa">
+                                                        <a href="product.jsp" target="_self" title="PCenison meatloa">
                                                             <img src="image/catalog/demo/product/270/f6.jpg" class="img-1 img-responsive" alt="image1">
                                                             <img src="image/catalog/demo/product/270/f2.jpg" class="img-2 img-responsive" alt="image2">
                                                         </a>
@@ -3580,7 +3580,7 @@
                                                             </div>
                                                             <span class="rating-num">( 2 )</span>
                                                         </div>
-                                                        <h4><a href="product.html" title="Pastrami bacon" target="_self">Cenison meatloa</a></h4>
+                                                        <h4><a href="product.jsp" title="Pastrami bacon" target="_self">Cenison meatloa</a></h4>
                                                         
                                                     </div>
                                                     <p class="price">$42.00</p>
@@ -3596,7 +3596,7 @@
                                                 <div class="left-block left-b">
                                                     
                                                     <div class="product-image-container second_img">
-                                                        <a href="product.html" target="_self" title="Chicken swinesha">
+                                                        <a href="product.jsp" target="_self" title="Chicken swinesha">
                                                             <img src="image/catalog/demo/product/270/fu2.jpg" class="img-1 img-responsive" alt="image1">
                                                             <img src="image/catalog/demo/product/270/fu9.jpg" class="img-2 img-responsive" alt="image2">
                                                         </a>
@@ -3629,7 +3629,7 @@
                                                             </div>
                                                             <span class="rating-num">( 2 )</span>
                                                         </div>
-                                                        <h4><a href="product.html" title="Pastrami bacon" target="_self">Chicken swinesha</a></h4>
+                                                        <h4><a href="product.jsp" title="Pastrami bacon" target="_self">Chicken swinesha</a></h4>
                                                         
                                                     </div>
                                                     <p class="price">
@@ -3693,7 +3693,7 @@
                                                     <div class="left-block left-b">
                                                         
                                                         <div class="product-image-container second_img">
-                                                            <a href="product.html" target="_self" title="Ullamco occaeca">
+                                                            <a href="product.jsp" target="_self" title="Ullamco occaeca">
                                                                 <img src="image/catalog/demo/product/270/h1.jpg" class="img-1 img-responsive" alt="image1">
                                                                 <img src="image/catalog/demo/product/270/h7.jpg" class="img-2 img-responsive" alt="image2">
                                                             </a>
@@ -3724,7 +3724,7 @@
                                                                 <span class="fa fa-stack"><i class="fa fa-star fa-stack-2x"></i></span>
                                                                 <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-2x"></i></span>
                                                             </div>
-                                                            <h4><a href="product.html" title="Pastrami bacon" target="_self">Ullamco occaeca </a></h4>
+                                                            <h4><a href="product.jsp" title="Pastrami bacon" target="_self">Ullamco occaeca </a></h4>
                                                             
                                                         </div>
                                                         <p class="price">
@@ -3743,7 +3743,7 @@
                                                     <div class="left-block left-b">
                                                         
                                                         <div class="product-image-container second_img">
-                                                            <a href="product.html" target="_self" title="Eiusmod tempor incid">
+                                                            <a href="product.jsp" target="_self" title="Eiusmod tempor incid">
                                                                 <img src="image/catalog/demo/product/270/e3.jpg" class="img-1 img-responsive" alt="image1">
                                                                 <img src="image/catalog/demo/product/270/e8.jpg" class="img-2 img-responsive" alt="image2">
                                                             </a>
@@ -3774,7 +3774,7 @@
                                                                 <span class="fa fa-stack"><i class="fa fa-star fa-stack-2x"></i></span>
                                                                 <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-2x"></i></span>
                                                             </div>
-                                                            <h4><a href="product.html" title="Pastrami bacon" target="_self">Eiusmod tempor incid</a></h4>
+                                                            <h4><a href="product.jsp" title="Pastrami bacon" target="_self">Eiusmod tempor incid</a></h4>
                                                             
                                                         </div>
                                                         <p class="price">
@@ -3794,7 +3794,7 @@
                                                     <div class="left-block left-b">
                                                         
                                                         <div class="product-image-container second_img">
-                                                            <a href="product.html" target="_self" title="Duis aute irure ">
+                                                            <a href="product.jsp" target="_self" title="Duis aute irure ">
                                                                 <img src="image/catalog/demo/product/270/e4.jpg" class="img-1 img-responsive" alt="image1">
                                                                 <img src="image/catalog/demo/product/270/e7.jpg" class="img-2 img-responsive" alt="image2">
                                                             </a>
@@ -3825,7 +3825,7 @@
                                                                 <span class="fa fa-stack"><i class="fa fa-star fa-stack-2x"></i></span>
                                                                 <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-2x"></i></span>
                                                             </div>
-                                                            <h4><a href="product.html" title="Pastrami bacon" target="_self">Duis aute irure </a></h4>
+                                                            <h4><a href="product.jsp" title="Pastrami bacon" target="_self">Duis aute irure </a></h4>
                                                             
                                                         </div>
                                                         <p class="price">
@@ -3845,7 +3845,7 @@
                                                     <div class="left-block left-b">
                                                         
                                                         <div class="product-image-container second_img">
-                                                            <a href="product.html" target="_self" title="Excepteur sint occ">
+                                                            <a href="product.jsp" target="_self" title="Excepteur sint occ">
                                                                 <img src="image/catalog/demo/product/270/fu5.jpg" class="img-1 img-responsive" alt="image1">
                                                                 <img src="image/catalog/demo/product/270/fu6.jpg" class="img-2 img-responsive" alt="image2">
                                                             </a>
@@ -3876,7 +3876,7 @@
                                                                 <span class="fa fa-stack"><i class="fa fa-star fa-stack-2x"></i></span>
                                                                 <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-2x"></i></span>
                                                             </div>
-                                                            <h4><a href="product.html" title="Pastrami bacon" target="_self">Excepteur sint occ</a></h4>
+                                                            <h4><a href="product.jsp" title="Pastrami bacon" target="_self">Excepteur sint occ</a></h4>
                                                             
                                                         </div>
                                                         <p class="price">
@@ -3895,7 +3895,7 @@
                                                     <div class="left-block left-b">
                                                        
                                                         <div class="product-image-container second_img">
-                                                            <a href="product.html" target="_self" title="PCenison meatloa">
+                                                            <a href="product.jsp" target="_self" title="PCenison meatloa">
                                                                 <img src="image/catalog/demo/product/270/f6.jpg" class="img-1 img-responsive" alt="image1">
                                                                 <img src="image/catalog/demo/product/270/f2.jpg" class="img-2 img-responsive" alt="image2">
                                                             </a>
@@ -3926,7 +3926,7 @@
                                                                 <span class="fa fa-stack"><i class="fa fa-star fa-stack-2x"></i></span>
                                                                 <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-2x"></i></span>
                                                             </div>
-                                                            <h4><a href="product.html" title="Pastrami bacon" target="_self">Cenison meatloa</a></h4>
+                                                            <h4><a href="product.jsp" title="Pastrami bacon" target="_self">Cenison meatloa</a></h4>
                                                             
                                                         </div>
                                                         <p class="price">$42.00</p>
@@ -3943,7 +3943,7 @@
                                                             <span class="label-product label-sale">-10%</span>
                                                         </div>
                                                         <div class="product-image-container second_img">
-                                                            <a href="product.html" target="_self" title="Quis nostrud exercita">
+                                                            <a href="product.jsp" target="_self" title="Quis nostrud exercita">
                                                                 <img src="image/catalog/demo/product/270/f2.jpg" class="img-1 img-responsive" alt="image1">
                                                                 <img src="image/catalog/demo/product/270/f4.jpg" class="img-2 img-responsive" alt="image2">
                                                             </a>
@@ -3973,7 +3973,7 @@
                                                                 <span class="fa fa-stack"><i class="fa fa-star fa-stack-2x"></i></span>
                                                                 <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-2x"></i></span>
                                                             </div>
-                                                            <h4><a href="product.html" title="Pastrami bacon" target="_self">Quis nostrud exercita</a></h4>
+                                                            <h4><a href="product.jsp" title="Pastrami bacon" target="_self">Quis nostrud exercita</a></h4>
                                                             
                                                         </div>
                                                         <p class="price">

@@ -8,6 +8,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -117,7 +118,7 @@ public class IndexController {
 //根据名字获取南瓜信息，并将信息返回至页面
 
         @RequestMapping("/findById")
-        public ModelAndView findById(Integer id){
+        public ModelAndView findById(@RequestParam Integer id){
                 List<Merchandise> merchandiseList=merchandiseImpl.findById(id);
                 ModelAndView modelAndView=new ModelAndView();
                 modelAndView.addObject("merchandiseList",merchandiseList.get(0).getGoodsName());
