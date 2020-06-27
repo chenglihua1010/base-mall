@@ -121,8 +121,8 @@ public class IndexController {
         public ModelAndView findById(@RequestParam Integer id){
                 List<Merchandise> merchandiseList=merchandiseImpl.findById(id);
                 ModelAndView modelAndView=new ModelAndView();
-                modelAndView.addObject("merchandiseList",merchandiseList.get(0).getGoodsName());
-                modelAndView.setViewName("blank");
+                modelAndView.addObject("merchandise",merchandiseList.get(0));
+                modelAndView.setViewName("product");
                 return modelAndView;
         }
 

@@ -70,7 +70,7 @@
         <property name="sessionFactory" ref="sessionFactory" />
     </bean>
 
-    <bean id="orderImpl" class="com.pumpkin.dao.impl.OrderDaoImpl">
+    <bean id="orderDaoImpl" class="com.pumpkin.dao.impl.OrderDaoImpl">
         <property name="sessionFactory" ref="sessionFactory" />
     </bean>
 
