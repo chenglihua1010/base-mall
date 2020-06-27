@@ -2072,7 +2072,7 @@
                             <c:forEach items="${merchandiseList}" var="merchandise">
 
                                 <li>
-                                        <a href="/index/findById?id=${merchandise.id}"><img src="${merchandise.imgs}" alt="${merchandise.goodsName}" >${merchandise.goodsName}</a>
+                                        <a href="/index/findByGI?goodsId=${merchandise.goodsId}"><img src="${merchandise.imgs}" alt="${merchandise.goodsName}" >${merchandise.goodsName}</a>
 
                                 </li>
 

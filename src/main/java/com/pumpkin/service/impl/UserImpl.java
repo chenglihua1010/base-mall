@@ -13,6 +13,7 @@ import javax.annotation.Resource;
 public class UserImpl implements UserInterface{
 
         public UserDaoImpl userDaoImpl;
+
         @Resource(name = "userDaoImpl")
         public void setUserDaoimpl(UserDaoImpl userDaoimpl) {
                 this.userDaoImpl = userDaoimpl;

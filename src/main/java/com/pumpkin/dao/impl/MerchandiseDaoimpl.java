@@ -133,4 +133,17 @@ public class MerchandiseDaoimpl  extends BaseDaoImpl<Merchandise> implements Mer
                 }
                 return merchandiseList;
         }
+
+        public List<Merchandise> findByGI(String goodsId){
+                List<Merchandise> merchandiseList=new ArrayList<Merchandise>();
+                String sql="SELECT * from base_merchandise where goodsId=:goodsId";
+                org.hibernate.Query query=this.getSession().createSQLQuery(sql).addEntity(Merchandise.class);
+                query.setParameter("goodsId",goodsId);
+                List list=query.list();
+                if(null!=list){
+                        merchandiseList=(List<Merchandise>) list;
+                }
+                return merchandiseList;
+
+        }
 }

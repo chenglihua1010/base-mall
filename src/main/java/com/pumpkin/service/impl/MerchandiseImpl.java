@@ -40,6 +40,11 @@ public class MerchandiseImpl implements MerchandiseInterface{
                 return this.merchandiseDaoimpl.findByGn(goodsName);
         }
 
+        public List<Merchandise> findByGI(String goodsId){
+                return this.merchandiseDaoimpl.findByGI(goodsId);
+        }
+
+
         public void add(Merchandise merchandise){
                 merchandiseDaoimpl.add(merchandise);
         }

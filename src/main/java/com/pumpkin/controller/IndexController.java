@@ -125,7 +125,14 @@ public class IndexController {
                 modelAndView.setViewName("product");
                 return modelAndView;
         }
-
+        @RequestMapping("/findByGI")
+        public ModelAndView findByGI(@RequestParam String goodsId) {
+                List<Merchandise> merchandisesList = merchandiseImpl.findByGI(goodsId);
+                ModelAndView modelAndView=new ModelAndView();
+                modelAndView.addObject("merchandise",merchandisesList.get(0));
+                modelAndView.setViewName("product");
+                return modelAndView;
+        }
         @RequestMapping("/findByGn")
         public ModelAndView findByGn(String goodsName){
                 List<Merchandise> merchandiseList=merchandiseImpl.findByGn(goodsName);
