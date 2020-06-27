@@ -15,7 +15,7 @@ public class OrderController {
 
         private OrderImpl orderImpl;
 
-        @Resource//??
+        @Resource(name = "orderImpl")
         public void setOrderImpl(OrderImpl orderImpl) {
                 this.orderImpl = orderImpl;
         }
