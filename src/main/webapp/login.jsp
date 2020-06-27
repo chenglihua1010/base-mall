@@ -39,7 +39,7 @@
     密码：<input name="password" type="password"> <br/>
     <input name="Submits" type="submit" value="登录"/>
     <input name="ReSet" type="reset" value="重置"/>
-    <a href="regist.jsp"><input type="button"  value="注册"/></a>
+    <a href="register.jsp"><input type="button"  value="注册"/></a>
 
 </form>
 </body>

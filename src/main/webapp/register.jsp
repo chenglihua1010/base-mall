@@ -8,7 +8,7 @@
 </head>
 <body>
 <h3>用户注册</h3>
-<form method="post" action="/login/user/addUser">
+<form method="post" action="/user/addUser">
     <table>
         <tr>
             <td><label>登录名：</label></td>
@@ -23,7 +23,8 @@
             <td><input type="text" name="name"></td>
         </tr>
         <tr>
-            <td><input type="submit" value="注册"/></td>
+            <td><input type="submit" value="注册"/>
+
         </tr>
     </table>
 </form>

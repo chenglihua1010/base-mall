@@ -60,6 +60,7 @@ public class UserController {
         public String showReUser(){
                 return "register";
         }
+
         //注册的数据传到addUser？？
         //method = RequestMethod.GET/POST???
 
