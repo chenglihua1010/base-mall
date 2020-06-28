@@ -19,7 +19,7 @@ public class TransportImpl implements TransportInterface{
 
         public void add(Transport transport){
                 transportDaoImpl.add(transport);
-
+//错误
         }
 
 

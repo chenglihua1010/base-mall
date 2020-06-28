@@ -1,3 +1,4 @@
+<%@ taglib prefix="s" uri="/struts-tags" %>
 <%@ page language="java" contentType="text/html; charset=utf-8"
          pageEncoding="utf-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -15,9 +16,16 @@
     手机号码：<input name="phone" type="text" value="${order.phone}"><br/>
     收货地址：<input name="address" type="text" value="${order.address}"><br/>
     <%--支付方式下拉--%>
-    支付方式：<input name="pay" type="text"><br/>
-    订单状态：<input name="status" type="text"> <br/>
-    创建时间：<input name="createTime" type="${order.createTime}"> <br/>
+    支付方式：<input name="pay"> <select name="pay">
+         <option value="0">-请选择-</option>
+        <option value="1">-支付宝-</option>
+        <option value="2">-微信-</option>
+        <option value="3">-其他支付-</option>
+
+    </select>
+    <%--<br/>--%>
+    订单状态：<input name="status" type="text" value="已下单"> <br/>
+    创建时间：<input name="createTime" type="text" value="${order.createTime}"> <br/>
     <input name="Submits" type="submit" value="确认订单"/>
 
 

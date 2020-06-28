@@ -33,9 +33,9 @@ public class TransportController {
 
                 Transport transport=new Transport();
                 String createTime=request.getParameter("createTime");
-
+//                Date date=Date.parse(createTime);
                 transport.setBusId(busId);
-                //transport.setCreateTime();
+                transport.setCreateTime(new Date());
                 //santianhou
                 transportImpl.add(transport);
 
