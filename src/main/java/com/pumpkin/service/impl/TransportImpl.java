@@ -12,7 +12,7 @@ import javax.annotation.Resource;
 public class TransportImpl implements TransportInterface{
         private TransportDaoImpl transportDaoImpl;
 
-        @Resource(name = "transportDapImpl")
+        @Resource(name = "transportDaoImpl")
         public void setTransportDaoImpl(TransportDaoImpl transportDaoImpl) {
                 this.transportDaoImpl = transportDaoImpl;
         }

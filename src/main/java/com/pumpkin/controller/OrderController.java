@@ -52,6 +52,7 @@ public class OrderController {
                 order.setPhone(phoneInteger);
                 order.setAddress(address);
                 orderImpl.add(order);
+                //??
                 modelAndView.addObject("order",order);
                 modelAndView.setViewName("payment");
                 return modelAndView;
