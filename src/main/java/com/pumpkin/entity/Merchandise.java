@@ -18,6 +18,18 @@ public class Merchandise implements Serializable{
         private Integer purchaseCount;
         private String origin;
         private Double goodsPrice;
+        private String size;
+
+
+        @Column
+        public String getSize() {
+                return size;
+        }
+
+        public void setSize(String size) {
+                this.size = size;
+        }
+
         @Column(name = "goodsPrice")
         public Double getGoodsPrice() {
                 return goodsPrice;

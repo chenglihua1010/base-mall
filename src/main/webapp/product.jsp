@@ -1041,8 +1041,8 @@
 	<div class="main-container container">
 		<ul class="breadcrumb">
 			<li><a href="#"><i class="fa fa-home"></i></a></li>
-			<li><a href="#">Smartphone & Tablets</a></li>
-			<li><a href="#">Chicken swinesha</a></li>
+			<li><a href="#">商品详情</a></li>
+			<li><a href="#"> ${merchandise.describe}</a></li>
 			
 		</ul>
 		
@@ -1289,25 +1289,25 @@
 				
 						<div class="content-product-left class-honizol col-md-5 col-sm-12 col-xs-12">
 							<div class="large-image  ">
-								<img itemprop="image" class="product-image-zoom" src="${merchandise.imgs}"  title="Chicken swinesha" alt="Chicken swinesha">
+								<img itemprop="image" class="product-image-zoom" src="${merchandise.imgs}"  title="${merchandise.goodsName}" alt="${merchandise.goodsName}.goodsName">
 							</div>
 							<a class="thumb-video pull-left" href="https://www.youtube.com/watch?v=HhabgvIIXik"><i class="fa fa-youtube-play"></i></a>
-							
+							<%--商品选择--%>
 							<div id="thumb-slider" class="yt-content-slider full_slider owl-drag" data-rtl="yes" data-autoplay="no" data-autoheight="no" data-delay="4" data-speed="0.6" data-margin="10" data-items_column00="4" data-items_column0="4" data-items_column1="3" data-items_column2="4"  data-items_column3="1" data-items_column4="1" data-arrows="yes" data-pagination="no" data-lazyload="yes" data-loop="no" data-hoverpause="yes">
-								<a data-index="0" class="img thumbnail " data-image="image/catalog/demo/product/fashion/1.jpg" title="Chicken swinesha">
-									<img src="image/catalog/demo/product/fashion/1.jpg" title="Chicken swinesha" alt="Chicken swinesha">
+								<a data-index="0" class="img thumbnail " data-image="${merchandise.imgs}" title="${merchandise.goodsName}">
+									<img src="${merchandise.imgs}" title="${merchandise.imgs}" alt="${merchandise.goodsName}">
 								</a>
-								<a data-index="1" class="img thumbnail " data-image="image/catalog/demo/product/fashion/2.jpg" title="Chicken swinesha">
-									<img src="image/catalog/demo/product/fashion/2.jpg" title="Chicken swinesha" alt="Chicken swinesha">
+								<a data-index="1" class="img thumbnail " data-image="${merchandise.imgs}" title="${merchandise.goodsName}">
+									<img src="${merchandise.imgs}" title="${merchandise.goodsName}" alt="${merchandise.goodsName}">
 								</a>
-								<a data-index="2" class="img thumbnail " data-image="image/catalog/demo/product/fashion/3.jpg" title="Chicken swinesha">
-									<img src="image/catalog/demo/product/fashion/3.jpg" title="Chicken swinesha" alt="Chicken swinesha">
+								<a data-index="2" class="img thumbnail " data-image="${merchandise.imgs}" title="${merchandise.goodsName}">
+									<img src="${merchandise.imgs}" title="${merchandise.goodsName}" alt="${merchandise.goodsName}">
 								</a>
-								<a data-index="3" class="img thumbnail " data-image="image/catalog/demo/product/fashion/4.jpg" title="Chicken swinesha">
-									<img src="image/catalog/demo/product/fashion/4.jpg" title="Chicken swinesha" alt="Chicken swinesha">
+								<a data-index="3" class="img thumbnail " data-image="${merchandise.imgs}" title="${merchandise.goodsName}">
+									<img src="${merchandise.imgs}" title="${merchandise.goodsName}" alt="${merchandise.goodsName}">
 								</a>
-								<a data-index="4" class="img thumbnail " data-image="image/catalog/demo/product/fashion/5.jpg" title="Chicken swinesha">
-									<img src="image/catalog/demo/product/fashion/5.jpg" title="Chicken swinesha" alt="Chicken swinesha">
+								<a data-index="4" class="img thumbnail " data-image="${merchandise.imgs}" title="${merchandise.goodsName}">
+									<img src="${merchandise.imgs}" title="${merchandise.goodsName}" alt="${merchandise.goodsName}">
 								</a>
 							</div>
 							
@@ -1347,11 +1347,12 @@
 
 							<div class="product-box-desc">
 								<div class="inner-box-desc">
-									<div class="price-tax"><span>Ex Tax:</span> $60.00</div>
+									<div class="price-tax"><span>商品库存:</span> ${merchandise.inventory}</div>
+                                    <%--积分--%>
 									<div class="reward"><span>Price in reward points:</span> 400</div>
 									<div class="brand"><span>Brand:</span><a href="#">Apple</a>		</div>
-									<div class="model"><span>Product Code:</span> Product 15</div>
-									<div class="reward"><span>Reward Points:</span> 100</div>
+									<div class="model"><span>商品id:</span> ${merchandise.goodsId}</div>
+									<div class="reward"><span>生产地:</span> ${merchandise.origin}</div>
 								</div>
 							</div>
 
@@ -1359,26 +1360,28 @@
 							<div id="product">
 								<h4>Available Options</h4>
 								<div class="image_option_type form-group required">
-									<label class="control-label">Colors</label>
+									<label class="control-label">Size</label>
 									<ul class="product-options clearfix"id="input-option231">
 										<li class="radio">
 											<label>
-												<input class="image_radio" type="radio" name="option[231]" value="33"> 
-												<img src="image/demo/colors/blue.jpg" data-original-title="blue +$12.00" class="img-thumbnail icon icon-color">				<i class="fa fa-check"></i>
+												<input class="image_radio" type="radio" name="option[231]" value="33">
+                                                <%--选择商品尺寸--%>
+												<%--<img src="image/demo/colors/blue.jpg" data-original-title="blue +$12.00" class="img-thumbnail icon icon-color">				<i class="fa fa-check"></i>--%>
+												<img src="image/demo/colors/blue.jpg" data-original-title="big +$12.00" class="img-thumbnail icon icon-color">				<i class="fa fa-check"></i>
 												<label> </label>
 											</label>
 										</li>
 										<li class="radio">
 											<label>
 												<input class="image_radio" type="radio" name="option[231]" value="34"> 
-												<img src="image/demo/colors/brown.jpg" data-original-title="brown -$12.00" class="img-thumbnail icon icon-color">				<i class="fa fa-check"></i>
+												<img src="image/demo/colors/brown.jpg" data-original-title="small -$12.00" class="img-thumbnail icon icon-color">				<i class="fa fa-check"></i>
 												<label> </label>
 											</label>
 										</li>
 										<li class="radio">
 											<label>
 												<input class="image_radio" type="radio" name="option[231]" value="35"> <img src="image/demo/colors/green.jpg"
-												data-original-title="green +$12.00" class="img-thumbnail icon icon-color">				<i class="fa fa-check"></i>
+												data-original-title="middle +$12.00" class="img-thumbnail icon icon-color">				<i class="fa fa-check"></i>
 												<label> </label>
 											</label>
 										</li>
