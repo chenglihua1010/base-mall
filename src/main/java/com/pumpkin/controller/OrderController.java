@@ -40,6 +40,8 @@ public class OrderController {
                 Integer phoneInteger=Integer.parseInt(phone);
                 String address=request.getParameter("address");
 
+                String size=request.getParameter("size");
+
                 Order order=new Order();
                 order.setGoodsName(goodsName);
                 order.setGoodsId(goodsId);

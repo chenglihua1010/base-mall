@@ -1364,7 +1364,7 @@
 									<ul class="product-options clearfix"id="input-option231">
 										<li class="radio">
 											<label>
-												<input class="image_radio" type="radio" name="option[231]" value="33">
+												<input class="image_radio" type="radio" name="size" value="big">
                                                 <%--选择商品尺寸--%>
 												<%--<img src="image/demo/colors/blue.jpg" data-original-title="blue +$12.00" class="img-thumbnail icon icon-color">				<i class="fa fa-check"></i>--%>
 												<img src="image/demo/colors/blue.jpg" data-original-title="big +$12.00" class="img-thumbnail icon icon-color">				<i class="fa fa-check"></i>
@@ -1373,14 +1373,14 @@
 										</li>
 										<li class="radio">
 											<label>
-												<input class="image_radio" type="radio" name="option[231]" value="34"> 
+												<input class="image_radio" type="radio" name="size" value="small">
 												<img src="image/demo/colors/brown.jpg" data-original-title="small -$12.00" class="img-thumbnail icon icon-color">				<i class="fa fa-check"></i>
 												<label> </label>
 											</label>
 										</li>
 										<li class="radio">
 											<label>
-												<input class="image_radio" type="radio" name="option[231]" value="35"> <img src="image/demo/colors/green.jpg"
+												<input class="image_radio" type="radio" name="size" value="middle"> <img src="image/demo/colors/green.jpg"
 												data-original-title="middle +$12.00" class="img-thumbnail icon icon-color">				<i class="fa fa-check"></i>
 												<label> </label>
 											</label>
