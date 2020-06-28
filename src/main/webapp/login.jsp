@@ -34,12 +34,16 @@
 </script>
 
 <body>
+<%--"/user/toLogin"为submit跳入的方法体--%>
 <form method="post" action="/user/toLogin">
+    <%--填写的数据为方体所提供，可由HttpServletRequest request接收--%>
     用户名：<input name="accountId" type="text"><br/>
     密码：<input name="password" type="password"> <br/>
     <input name="Submits" type="submit" value="登录"/>
     <input name="ReSet" type="reset" value="重置"/>
+        <%--多个submit??--%>
     <a href="register.jsp"><input type="button"  value="注册"/></a>
+    <%--<a href="register.jsp"><input type="submit"  value="注册"/></a>--%>
 
 </form>
 </body>

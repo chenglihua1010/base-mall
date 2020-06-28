@@ -51,6 +51,8 @@ public class IndexController {
         public String goToEeeor(){
                 return "error";
         }
+
+
         @RequestMapping("/toLogin")
         public String goToLogin(){
                 return "login";
@@ -155,8 +157,8 @@ public class IndexController {
         public ModelAndView findByGn(String goodsName){
                 List<Merchandise> merchandiseList=merchandiseImpl.findByGn(goodsName);
                 ModelAndView modelAndView=new ModelAndView();
-                modelAndView.addObject("merchandiseList",merchandiseList.get(0).getGoodsName());
-                modelAndView.setViewName("blank");
+                modelAndView.addObject("merchandiseList",merchandiseList);
+                modelAndView.setViewName("payment");
                 return modelAndView;
         }
 
@@ -164,7 +166,7 @@ public class IndexController {
         public ModelAndView deleteById(Integer id){
                 merchandiseImpl.deleteById(id);
                 ModelAndView modelAndView=new ModelAndView();
-                modelAndView.setViewName("blank");
+                modelAndView.setViewName("payment");
                 return modelAndView;
         }
          @RequestMapping("/add")

@@ -1,4 +1,6 @@
 package com.pumpkin.dao;
 
-public class TransportDao {
+import com.pumpkin.entity.Transport;
+
+public interface TransportDao extends BaseDao<Transport>{
 }

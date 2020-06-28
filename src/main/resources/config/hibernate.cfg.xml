@@ -61,6 +61,7 @@
 
     <!--  配置Person持久化类的DAO bean-->
 
+    <!--事物配置 bean？？-->
     <bean id="merchandiseDaoimpl" class="com.pumpkin.dao.impl.MerchandiseDaoimpl">
         <property name="sessionFactory" ref="sessionFactory" />
 </bean>
@@ -73,6 +74,11 @@
     <bean id="orderDaoImpl" class="com.pumpkin.dao.impl.OrderDaoImpl">
         <property name="sessionFactory" ref="sessionFactory" />
     </bean>
+
+    <bean id="transportDaoImpl" class="com.pumpkin.dao.impl.TransportDaoImpl">
+        <property name="sessionFactory" ref="sessionFactory" />
+    </bean>
+
 
 
     <!--<bean id="baseDaoImpl" class="com.pumpkin.dao.impl.BaseDaoImpl">-->

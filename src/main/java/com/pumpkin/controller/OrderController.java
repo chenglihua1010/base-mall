@@ -23,7 +23,7 @@ public class OrderController {
         }
 
 
-        //下订单
+        //创建订单，并进入订单支付页面
         @RequestMapping("/addOrder")
         public ModelAndView add(HttpServletRequest request){
                 ModelAndView modelAndView=new ModelAndView();
@@ -52,6 +52,8 @@ public class OrderController {
                 order.setPhone(phoneInteger);
                 order.setAddress(address);
                 orderImpl.add(order);
+                modelAndView.addObject("order",order);
+                modelAndView.setViewName("payment");
                 return modelAndView;
         }
 }

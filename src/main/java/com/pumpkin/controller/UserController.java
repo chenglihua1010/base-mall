@@ -80,6 +80,7 @@ public class UserController {
 
 
         @RequestMapping("/toLogin")
+
         public ModelAndView toLogin(HttpServletRequest request, HttpServletResponse response){
                 ModelAndView modelAndView=new ModelAndView();
                 String accountId=request.getParameter("accountId");
