@@ -14,6 +14,7 @@ public class Transport implements Serializable{
         private Integer status;
         private Date createTime;
         private Date arrivalTime;
+        private Integer type;
 
         @Id
         @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -52,6 +53,14 @@ public class Transport implements Serializable{
         @Column(name = "arrivalTime")
         public Date getArrivalTime() {
                 return arrivalTime;
+        }
+        @Column(name = "type")
+        public Integer getType() {
+                return type;
+        }
+
+        public void setType(Integer type) {
+                this.type = type;
         }
 
         public void setArrivalTime(Date arrivalTime) {
