@@ -1,4 +1,6 @@
 package com.pumpkin.dao;
 
-public class CommentDao {
+import com.pumpkin.entity.Comment;
+
+public interface CommentDao extends BaseDao<Comment> {
 }

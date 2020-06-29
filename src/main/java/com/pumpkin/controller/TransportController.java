@@ -51,7 +51,7 @@ public class TransportController {
                 transport.setCreateTime(new Date());
 
 
-                //santianhou
+
                 transportImpl.add(transport);
 
                 modelAndView.setViewName("success");
