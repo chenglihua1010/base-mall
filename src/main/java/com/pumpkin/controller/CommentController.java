@@ -1,6 +1,8 @@
 package com.pumpkin.controller;
 
 import com.pumpkin.entity.Comment;
+import com.pumpkin.entity.Order;
+import com.pumpkin.entity.Transport;
 import com.pumpkin.service.impl.CommentImpl;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -8,6 +10,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
+import java.util.Date;
 
 @Controller
 @RequestMapping("/comment")
@@ -26,13 +29,32 @@ public class CommentController {
         public ModelAndView addComment(HttpServletRequest request){
                 ModelAndView modelAndView=new ModelAndView();
                 Comment comment=new Comment();
+                Order order=new Order();
+                Transport transport=new Transport();
                 //test
-                comment.setBusId("qwe");
+//                    comment.setBusId("qwe");
+//                comment.setType(1);
+                String busId=request.getParameter("busId");
+                String accountId=request.getParameter("accountId");
+                String commentText=request.getParameter("commentText");
+                String orderStatus=request.getParameter("orderStatus");
+                String transportStatus=request.getParameter("transportStatus");
+
+                Integer orderStatusInt=Integer.parseInt(orderStatus);
+                Integer transportStatusInt=Integer.parseInt(transportStatus);
+
+                order.setPay(orderStatusInt);
+                transport.setStatus(transportStatusInt);
+
+                comment.setBusId(busId);
+                comment.setAccountId(accountId);
+                comment.setCommentText(commentText);
+                comment.setCreateTime(new Date());
+                //如何自动获取评价类型(支付方式,物流状态,物流公司选择)???
                 comment.setType(1);
 
-
-
                 commentImpl.add(comment);
+
 
                 return modelAndView;
         }

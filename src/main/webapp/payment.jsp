@@ -15,6 +15,8 @@
     总计价格：<input name="allPrice" type="text" value="${order.allPrice}"><br/>
     手机号码：<input name="phone" type="text" value="${order.phone}"><br/>
     收货地址：<input name="address" type="text" value="${order.address}"><br/>
+    <%--隐藏信息--%>
+    <input name="goodsId" type="hidden" value="${order.goodsId}"><br/>
     <%--支付方式下拉--%>
     <%--支付方式：<input name="pay"> --%>
     支付方式：
@@ -38,7 +40,7 @@
     创建时间：<input name="createTime" type="text" value="${order.createTime}"> <br/>
     <input name="Submits" type="submit" value="确认订单"/>
 
-
+<>
 
     <%--<input type="hidden" name="busId" value="${order.busId}">--%>
 

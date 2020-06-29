@@ -13,7 +13,7 @@ public class Comment implements Serializable{
         private String goodsId;
         private String goodsName;
         private String accountId;
-        private String imgs;
+        private String commentText;
         private Date createTime;
         private Integer type;
 
@@ -61,14 +61,14 @@ public class Comment implements Serializable{
         public void setAccountId(String accountId) {
                 this.accountId = accountId;
         }
-        @Column(name = "imgs")
-        public String getImgs() {
-                return imgs;
+        @Column(name = "commentText")
+        public String getCommentText() {
+                return commentText;
+        }
+        public void setCommentText(String commentText) {
+                this.commentText = commentText;
         }
 
-        public void setImgs(String imgs) {
-                this.imgs = imgs;
-        }
         @Column(name = "createTime")
         public Date getCreateTime() {
                 return createTime;

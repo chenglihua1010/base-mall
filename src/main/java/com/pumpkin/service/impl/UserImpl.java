@@ -27,11 +27,13 @@ public class UserImpl implements UserInterface{
         }
 
         public List<User> findByAccountId(String accountId){
-                return this.userDaoImpl.findByaccountId(accountId);
+                return this.userDaoImpl.findByAccountId(accountId);
 
         }
 
         public void add(User user){
                 userDaoImpl.add(user);
         }
+
+
 }

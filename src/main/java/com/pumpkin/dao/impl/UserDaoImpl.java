@@ -29,7 +29,7 @@ public class UserDaoImpl  extends BaseDaoImpl<User> implements UserDao{
                 return user;
         }
 
-        public List<User> findByaccountId(String accountId){
+        public List<User> findByAccountId(String accountId){
                 List<User>userList=new ArrayList<User>();
                 String sql="select*from base_user where accountId=:accountId";
                 Query query=getSession().createSQLQuery(sql).addEntity(User.class);
