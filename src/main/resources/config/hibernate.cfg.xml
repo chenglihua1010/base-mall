@@ -78,6 +78,9 @@
     <bean id="transportDaoImpl" class="com.pumpkin.dao.impl.TransportDaoImpl">
         <property name="sessionFactory" ref="sessionFactory" />
     </bean>
+    <bean id="commentDaoImpl" class="com.pumpkin.dao.impl.CommentDaoImpl">
+        <property name="sessionFactory" ref="sessionFactory" />
+    </bean>
 
 
 
