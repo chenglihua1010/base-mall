@@ -29,19 +29,31 @@ public class UserDaoImpl  extends BaseDaoImpl<User> implements UserDao{
                 return user;
         }
 
-        public List<User> findByAccountId(String accountId){
-                List<User>userList=new ArrayList<User>();
+        public User findByAccountId(String accountId){
+                User user=new User();
                 String sql="select*from base_user where accountId=:accountId";
                 Query query=getSession().createSQLQuery(sql).addEntity(User.class);
                 query.setParameter("accountId",accountId);
 
-                List list=query.list();
-                if(null!=userList){
-                        userList=(List<User>)list;
-
-                }return userList;
-
+                Object obj=query.uniqueResult();
+                if(null!=obj){
+                        user=(User)obj;
+                }return user;
         }
+
+        public User findByBusId(String busId){
+                User user=new User();
+                String sql="select *from base_user where busId=:busId";
+                Query query=getSession().createSQLQuery(sql).addEntity(User.class);
+                query.setParameter("busId",busId);
+                Object obj=query.uniqueResult();
+                if(null!=obj){
+                        user=(User)obj;
+                }return user;
+        }
+
+
+
         public void add(User user){
                 save(user);
         }

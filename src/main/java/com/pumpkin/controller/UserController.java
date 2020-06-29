@@ -108,4 +108,8 @@ public class UserController {
                 user=userImpl.getUserByAccountIdAndPsw(accountId,password);
                 return user;
         }
+
+        public User findByBusId(String busId){
+                return userImpl.findByBusId(busId);
+        }
 }

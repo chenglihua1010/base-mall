@@ -141,11 +141,11 @@ public class IndexController {
         public ModelAndView findByGI(HttpServletRequest request) {
                 String goodsId=request.getParameter("goodsId");
                 String accountId=request.getParameter("accountId");
-                List<User> userList=userImpl.findByAccountId(accountId);
+                User user=userImpl.findByAccountId(accountId);
 
                 List<Merchandise> merchandisesList = merchandiseImpl.findByGI(goodsId);
                 ModelAndView modelAndView=new ModelAndView();
-                modelAndView.addObject("merchandise",merchandisesList.get(0)).addObject("user",userList.get(0));
+                modelAndView.addObject("merchandise",merchandisesList.get(0)).addObject("user",user);
                 //
 //                modelAndView.addObject("user",userList.get(0));
                 modelAndView.setViewName("product");

@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import javax.annotation.Resource;
+import java.util.List;
 
 @Transactional
 @Service("orderImpl")
@@ -20,5 +21,13 @@ public class OrderImpl implements OrderInterface{
 
         public void add(Order order){
                 orderDaoImpl.add(order);
+        }
+
+        public Order findByBusId(String busId){
+                return this.orderDaoImpl.findByBusId(busId);
+        }
+
+        public void updateOrder(Order order){
+                orderDaoImpl.updateOrder(order);
         }
 }

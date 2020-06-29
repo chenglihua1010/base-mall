@@ -3,6 +3,7 @@ package com.pumpkin.controller;
 import com.pumpkin.entity.Order;
 import com.pumpkin.entity.Transport;
 import com.pumpkin.entity.User;
+import com.pumpkin.service.impl.OrderImpl;
 import com.pumpkin.service.impl.TransportImpl;
 import com.pumpkin.service.impl.UserImpl;
 import com.pumpkin.util.DateUtil;
@@ -20,6 +21,12 @@ import java.util.List;
 public class TransportController {
         private TransportImpl transportImpl;
         private UserImpl userImpl;
+        private OrderImpl orderImpl;
+
+        @Resource(name = "orderImpl")
+        public void setOrderImpl(OrderImpl orderImpl) {
+                this.orderImpl = orderImpl;
+        }
 
         @Resource(name = "userImpl")
         public void setUserImpl(UserImpl userImpl) {
@@ -43,23 +50,25 @@ public class TransportController {
                 String busId=request.getParameter("busId");
                 //通过busId找到accountId, 再定位user
                 //通过accountId定位user
-                //??
                 String accountId=request.getParameter("accountId");
-                List<User> userList=userImpl.findByAccountId(accountId);
+//                List<User> userList=userImpl.findByAccountId(accountId);
 
 
-                //??
-                String goodsId=request.getParameter("goodsId");
-                String goodsName=request.getParameter("goodsName");
+                //??以存在的值,下步还有用, 还需set进去?
+//                String goodsId=request.getParameter("goodsId");
+//                String goodsName=request.getParameter("goodsName");
+                //更新order的pay
+                Order order=orderImpl.findByBusId(busId);
                 String pay=request.getParameter("pay");
                 Integer payInt=Integer.parseInt(pay);
-
-                Order order=new Order();
-                order.setBusId(busId);
-                order.setGoodsId(goodsId);
-                order.setGoodsName(goodsName);
-                order.setAccountId(accountId);
                 order.setPay(payInt);
+                orderImpl.updateOrder(order);
+
+//                order.setBusId(busId);
+//                order.setGoodsId(goodsId);
+//                order.setGoodsName(goodsName);
+//                order.setAccountId(accountId);
+
 //                Integer status=1;
                 String type=request.getParameter("type");
                 Integer typeInt=Integer.parseInt(type);
@@ -76,12 +85,13 @@ public class TransportController {
                         e.printStackTrace();
                 }
                 transport.setCreateTime(new Date());
-
+                transport.setStatus(1);
                 transportImpl.add(transport);
 
                 modelAndView.addObject("transprot",transport);
                 //?
-                modelAndView.addObject("userList",userList.get(0));
+//                modelAndView.addObject("userList",userList.get(0));
+                //用途范围,可以理解添加一个名为""的类,可以用类中的所有内容?
                 modelAndView.addObject("order",order);
                 modelAndView.setViewName("success");
 

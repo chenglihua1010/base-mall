@@ -26,14 +26,16 @@ public class UserImpl implements UserInterface{
                 return user;
         }
 
-        public List<User> findByAccountId(String accountId){
+        public User findByAccountId(String accountId){
                 return this.userDaoImpl.findByAccountId(accountId);
-
         }
 
         public void add(User user){
                 userDaoImpl.add(user);
         }
 
+        public User findByBusId(String busId){
+                return userDaoImpl.findByBusId(busId);
+        }
 
 }
