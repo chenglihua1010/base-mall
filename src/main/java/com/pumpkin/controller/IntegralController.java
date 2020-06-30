@@ -23,4 +23,13 @@ public class IntegralController {
                 integralImpl.addIntegral(integral);
                 return integral;
         }
+
+        public Integral findByAccountId(String accountId){
+                return integralImpl.findByAccountId(accountId);
+        }
+
+
+        public void updateIntegral(Integral integral){
+                integralImpl.updateIntegral(integral);
+        }
 }

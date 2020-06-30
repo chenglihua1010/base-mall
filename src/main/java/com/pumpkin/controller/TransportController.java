@@ -1,8 +1,10 @@
 package com.pumpkin.controller;
 
+import com.pumpkin.entity.Integral;
 import com.pumpkin.entity.Order;
 import com.pumpkin.entity.Transport;
 import com.pumpkin.entity.User;
+import com.pumpkin.service.impl.IntegralImpl;
 import com.pumpkin.service.impl.OrderImpl;
 import com.pumpkin.service.impl.TransportImpl;
 import com.pumpkin.service.impl.UserImpl;
@@ -22,6 +24,12 @@ public class TransportController {
         private TransportImpl transportImpl;
         private UserImpl userImpl;
         private OrderImpl orderImpl;
+        private IntegralImpl integralImpl;
+
+        @Resource(name = "integralImpl")
+        public void setIntegralImpl(IntegralImpl integralImpl) {
+                this.integralImpl = integralImpl;
+        }
 
         @Resource(name = "orderImpl")
         public void setOrderImpl(OrderImpl orderImpl) {
@@ -52,6 +60,14 @@ public class TransportController {
                 //通过accountId定位user
                 String accountId=request.getParameter("accountId");
 //                List<User> userList=userImpl.findByAccountId(accountId);
+
+                Integral integral=integralImpl.findByAccountId(accountId);
+                String score=request.getParameter("score");
+                Integer integralInt=Integer.parseInt(score);
+                //当前+本次订单所得
+                integral.setTotal(integral.getTotal()+integralInt);
+                //更新积分
+                integralImpl.updateIntegral(integral);
 
 
                 //??以存在的值,下步还有用, 还需set进去?

@@ -1,6 +1,8 @@
 package com.pumpkin.controller;
 
+import com.pumpkin.entity.Merchandise;
 import com.pumpkin.entity.Order;
+import com.pumpkin.service.impl.MerchandiseImpl;
 import com.pumpkin.service.impl.OrderImpl;
 import com.pumpkin.util.RandomUtil;
 import org.springframework.stereotype.Controller;
@@ -10,12 +12,19 @@ import org.springframework.web.servlet.ModelAndView;
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import java.util.Date;
+import java.util.List;
 
 @Controller
 @RequestMapping("/order")
 public class OrderController {
 
         private OrderImpl orderImpl;
+        private MerchandiseImpl merchandiseImpl;
+
+        @Resource(name = "merchandiseImpl")
+        public void setMerchandiseImpl(MerchandiseImpl merchandiseImpl) {
+                this.merchandiseImpl = merchandiseImpl;
+        }
 
         @Resource(name = "orderImpl")
         public void setOrderImpl(OrderImpl orderImpl) {
@@ -40,6 +49,13 @@ public class OrderController {
                 Integer phoneInteger=Integer.parseInt(phone);
                 String address=request.getParameter("address");
 
+                List<Merchandise> merchandiseList=merchandiseImpl.findByGn(goodsName);
+
+
+                //积分
+//                String integral=request.getParameter("integral");
+//                Integer integralInt=Integer.parseInt(integral);
+
                 String size=request.getParameter("size");
 
                 Order order=new Order();
@@ -56,6 +72,7 @@ public class OrderController {
                 orderImpl.add(order);
                 //??
                 modelAndView.addObject("order",order);
+                modelAndView.addObject("merchandise",merchandiseList.get(0));
                 modelAndView.setViewName("payment");
                 return modelAndView;
         }

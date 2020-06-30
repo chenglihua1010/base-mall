@@ -25,4 +25,8 @@ public class IntegralImpl implements IntegralInterface{
         public  Integral findByAccountId(String accountId){
                 return integralDaoImpl.findByAccountId(accountId);
         }
+
+        public void updateIntegral(Integral integral){
+                integralDaoImpl.updateIntegral(integral);
+        }
 }

@@ -19,9 +19,17 @@ public class Merchandise implements Serializable{
         private String origin;
         private Double goodsPrice;
         private String size;
+        private Integer score;
 
+        @Column(name = "score")
+        public Integer getScore() {
+                return score;
+        }
+        public void setScore(Integer score) {
+                this.score = score;
+        }
 
-        @Column
+        @Column(name = "size")
         public String getSize() {
                 return size;
         }

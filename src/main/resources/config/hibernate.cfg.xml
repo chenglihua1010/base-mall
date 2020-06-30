@@ -80,6 +80,8 @@
     </bean>
     <bean id="commentDaoImpl" class="com.pumpkin.dao.impl.CommentDaoImpl">
         <property name="sessionFactory" ref="sessionFactory" />
+    </bean> <bean id="integralDaoImpl" class="com.pumpkin.dao.impl.IntegralDaoImpl">
+        <property name="sessionFactory" ref="sessionFactory" />
     </bean>
 
 

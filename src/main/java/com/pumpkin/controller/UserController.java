@@ -89,6 +89,7 @@ public class UserController {
                 integral.setTotal(0);
                 integral.setStatus(2);
                 integralImpl.addIntegral(integral);
+
                 userImpl.add(user);
                 return "/login";
         }

@@ -13,6 +13,10 @@
     账号：<input name="accountId" type="text" value="${order.accountId}"><br/>
     商品名称：<input name="goodsName" type="text" value="${order.goodsName}"><br/>
     总计价格：<input name="allPrice" type="text" value="${order.allPrice}"><br/>
+
+    <%--单独获取某类的某一属性--%>
+    可获得积分：<input name="score" type="text" value="${merchandise.score}"><br>
+
     手机号码：<input name="phone" type="text" value="${order.phone}"><br/>
     收货地址：<input name="address" type="text" value="${order.address}"><br/>
     <%--隐藏信息--%>

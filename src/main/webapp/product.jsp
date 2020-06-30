@@ -1422,6 +1422,7 @@
 									<div class="cart">
                                         <%--隐藏参数传输--%>
                                         <input type="hidden" name="goodsId" value="${merchandise.goodsId}">
+                                        <input type="hidden" name="score" value="${merchandise.score}">
                                         <input type="hidden" name="goodsName" value="${merchandise.goodsName}">
                                         <input type="hidden" name="goodsPrice" value="${merchandise.goodsPrice}">
                                         <input type="hidden" name="accountId" value="${user.accountId}">
