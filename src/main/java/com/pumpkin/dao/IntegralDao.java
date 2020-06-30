@@ -1,4 +1,6 @@
 package com.pumpkin.dao;
 
-public class IntegralDao {
+import com.pumpkin.entity.Integral;
+
+public interface IntegralDao extends BaseDao<Integral>{
 }

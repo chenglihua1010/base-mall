@@ -21,10 +21,13 @@ public class CommentController {
         public CommentImpl getCommentImpl() {
                 return commentImpl;
         }
-@Resource(name = "commentImpl")
+        @Resource(name = "commentImpl")
         public void setCommentImpl(CommentImpl commentImpl) {
                 this.commentImpl = commentImpl;
         }
+
+
+
         @RequestMapping("/addComment")
         public ModelAndView addComment(HttpServletRequest request){
                 ModelAndView modelAndView=new ModelAndView();

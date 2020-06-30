@@ -1,7 +1,9 @@
 package com.pumpkin.controller;
 
+import com.pumpkin.entity.Integral;
 import com.pumpkin.entity.Merchandise;
 import com.pumpkin.entity.User;
+import com.pumpkin.service.impl.IntegralImpl;
 import com.pumpkin.service.impl.MerchandiseImpl;
 import com.pumpkin.service.impl.UserImpl;
 import org.springframework.stereotype.Controller;
@@ -20,6 +22,14 @@ import java.util.List;
 public class UserController {
 
         private UserImpl userImpl;
+        private IntegralImpl integralImpl;
+
+        @Resource(name = "integralImpl")
+        public void setIntegralImpl(IntegralImpl integralImpl) {
+                this.integralImpl = integralImpl;
+        }
+
+
         @Resource(name="userImpl")
         public void setUserImpl(UserImpl userImpl) {
                 this.userImpl = userImpl;
@@ -73,6 +83,12 @@ public class UserController {
                 user.setAccountId(accountId);
                 user.setPassword(password);
                 user.setName(name);
+                //生成积分
+                Integral integral=new Integral();
+                integral.setAccountId(accountId);
+                integral.setTotal(0);
+                integral.setStatus(2);
+                integralImpl.addIntegral(integral);
                 userImpl.add(user);
                 return "/login";
         }
