@@ -1,4 +1,6 @@
 package com.pumpkin.dao;
 
-public class TimingDao {
+import com.pumpkin.entity.Timing;
+
+public interface TimingDao extends BaseDao<Timing>{
 }

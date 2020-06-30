@@ -3,6 +3,7 @@ package com.pumpkin.controller;
 import com.pumpkin.entity.Integral;
 import com.pumpkin.entity.Merchandise;
 import com.pumpkin.entity.User;
+import com.pumpkin.entity.Vip;
 import com.pumpkin.service.impl.IntegralImpl;
 import com.pumpkin.service.impl.MerchandiseImpl;
 import com.pumpkin.service.impl.UserImpl;
@@ -15,6 +16,7 @@ import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 @Controller
@@ -75,11 +77,22 @@ public class UserController {
         //method = RequestMethod.GET/POST???
 
         @RequestMapping("/addUser")
-        public String addUser(
-                @RequestParam("accountId")String accountId,
-                @RequestParam("password")String password,
-                @RequestParam("name")String name){
+//        public String addUser(
+//                @RequestParam("accountId")String accountId,
+//                @RequestParam("password")String password,
+//                @RequestParam("name")String name){
+//                User user=new User();
+        public String addUser(HttpServletRequest request){
                 User user=new User();
+                String accountId=request.getParameter("accountId");
+                String password=request.getParameter("password");
+                String name=request.getParameter("name");
+                String viplevel=request.getParameter("viplevel");
+                Integer viplevelInt=Integer.parseInt(viplevel);
+                String duration=request.getParameter("duration");
+                Integer durationInt=Integer.parseInt(duration);
+
+
                 user.setAccountId(accountId);
                 user.setPassword(password);
                 user.setName(name);
@@ -89,6 +102,11 @@ public class UserController {
                 integral.setTotal(0);
                 integral.setStatus(2);
                 integralImpl.addIntegral(integral);
+                //生成会员
+                Vip vip=new Vip();
+                vip.setAcountId(accountId);
+                vip.setDuration(durationInt);
+                vip.setCreateTime(new Date());
 
                 userImpl.add(user);
                 return "/login";
@@ -97,7 +115,6 @@ public class UserController {
 
 
         @RequestMapping("/toLogin")
-
         public ModelAndView toLogin(HttpServletRequest request, HttpServletResponse response){
                 ModelAndView modelAndView=new ModelAndView();
                 String accountId=request.getParameter("accountId");

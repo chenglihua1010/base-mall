@@ -1,4 +1,6 @@
 package com.pumpkin.dao;
 
-public class VipDao {
+import com.pumpkin.entity.Vip;
+
+public interface VipDao extends BaseDao<Vip> {
 }
