@@ -23,5 +23,5 @@ public class CommentImpl implements CommentInterface{
 
         public void add(Comment comment){
                 commentDaoImpl.add(comment);
-=        }
+        }
 }

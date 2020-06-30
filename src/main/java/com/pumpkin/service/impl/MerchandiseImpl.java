@@ -48,4 +48,8 @@ public class MerchandiseImpl implements MerchandiseInterface{
         public void add(Merchandise merchandise){
                 merchandiseDaoimpl.add(merchandise);
         }
+
+        public void updateMerchandise(Merchandise merchandise){
+                merchandiseDaoimpl.updateMerchandie(merchandise);
+        }
 }

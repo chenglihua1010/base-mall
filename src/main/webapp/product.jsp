@@ -1349,7 +1349,7 @@
 								<div class="inner-box-desc">
 									<div class="price-tax"><span>商品库存:</span> ${merchandise.inventory}</div>
                                     <%--积分--%>
-									<div class="reward"><span>Price in reward points:</span> 400</div>
+									<div class="reward"><span>积分</span>${merchandise.score}</div>
 									<div class="brand"><span>Brand:</span><a href="#">Apple</a>		</div>
 									<div class="model"><span>商品id:</span> ${merchandise.goodsId}</div>
 									<div class="reward"><span>生产地:</span> ${merchandise.origin}</div>

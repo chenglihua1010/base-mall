@@ -43,13 +43,22 @@ public class OrderController {
                 Double goodsPriceDouble=Double.parseDouble(goodsPrice);
                 String count=request.getParameter("quantity");
                 Integer countInt=Integer.parseInt(count);
+
+                //更新库存，购买量
+                List<Merchandise> merchandiseList=merchandiseImpl.findByGn(goodsName);
+                merchandiseList.get(0).setPurchaseCount(merchandiseList.get(0).getPurchaseCount()+countInt);
+                merchandiseList.get(0).setInventory(merchandiseList.get(0).getInventory()-countInt);
+                merchandiseImpl.updateMerchandise(merchandiseList.get(0));
+
+
+
                 Double allPrice=countInt*goodsPriceDouble;
                 String accountId=request.getParameter("accountId");
                 String phone=request.getParameter("phone");
                 Integer phoneInteger=Integer.parseInt(phone);
                 String address=request.getParameter("address");
 
-                List<Merchandise> merchandiseList=merchandiseImpl.findByGn(goodsName);
+//                List<Merchandise> merchandiseList=merchandiseImpl.findByGn(goodsName);
 
 
                 //积分

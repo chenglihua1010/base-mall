@@ -146,4 +146,8 @@ public class MerchandiseDaoimpl  extends BaseDaoImpl<Merchandise> implements Mer
                 return merchandiseList;
 
         }
+
+        public void updateMerchandie(Merchandise merchandise){
+                save(merchandise);
+        }
 }
