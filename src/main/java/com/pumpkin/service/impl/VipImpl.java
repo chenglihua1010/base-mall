@@ -8,8 +8,8 @@ import org.springframework.transaction.annotation.Transactional;
 
 import javax.annotation.Resource;
 @Transactional
-@Service("vipDaoImpl")
-public class VipImpl implements VipInterface {
+@Service("vipImpl")
+public class VipImpl implements VipInterface{
         private VipDaoImpl vipDaoImpl;
         @Resource(name = "vipDaoImpl")
         public void setVipDaoImpl(VipDaoImpl vipDaoImpl) {

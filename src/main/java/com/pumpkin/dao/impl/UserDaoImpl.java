@@ -31,7 +31,7 @@ public class UserDaoImpl  extends BaseDaoImpl<User> implements UserDao{
 
         public User findByAccountId(String accountId){
                 User user=new User();
-                String sql="select*from base_user where accountId=:accountId";
+                String sql="select *from base_user where accountId=:accountId";
                 Query query=getSession().createSQLQuery(sql).addEntity(User.class);
                 query.setParameter("accountId",accountId);
 

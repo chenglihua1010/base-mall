@@ -52,4 +52,8 @@ public class MerchandiseImpl implements MerchandiseInterface{
         public void updateMerchandise(Merchandise merchandise){
                 merchandiseDaoimpl.updateMerchandie(merchandise);
         }
+
+        public Merchandise findByParam(String goodsName,String origin){
+                return merchandiseDaoimpl.findByParam(goodsName,origin);
+        }
 }

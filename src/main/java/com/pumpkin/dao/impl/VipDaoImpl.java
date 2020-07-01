@@ -17,7 +17,7 @@ public class VipDaoImpl extends BaseDaoImpl<Vip> implements VipDao{
 
         public Vip findByAccountId(String accountId){
                 Vip vip=new Vip();
-                String sql="select *from base_vip where accountId=:accountId";
+                String sql="select * from base_vip where accountId=:accountId";
                 Query query=getSession().createSQLQuery(sql).addEntity(Vip.class);
                 query.setParameter("accountId",accountId);
                 Object object=query.uniqueResult();

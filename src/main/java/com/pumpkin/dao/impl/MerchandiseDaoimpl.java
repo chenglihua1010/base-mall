@@ -1,20 +1,12 @@
 package com.pumpkin.dao.impl;
 
-import com.fasterxml.jackson.databind.util.JSONPObject;
 import com.pumpkin.dao.MerchandiseDao;
-import com.pumpkin.dao.impl.BaseDaoImpl;
 import com.pumpkin.entity.Merchandise;
-import org.hibernate.Session;
-import org.hibernate.SessionFactory;
 import org.hibernate.criterion.DetachedCriteria;
 import org.hibernate.query.Query;
 import org.springframework.orm.hibernate5.HibernateTemplate;
-import org.springframework.orm.hibernate5.support.HibernateDaoSupport;
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Repository;
-import org.springframework.transaction.annotation.Transactional;
 
-import javax.annotation.Resource;
 import java.util.ArrayList;
 import java.util.List;
 @Repository("merchandiseDaoimpl")
@@ -149,5 +141,17 @@ public class MerchandiseDaoimpl  extends BaseDaoImpl<Merchandise> implements Mer
 
         public void updateMerchandie(Merchandise merchandise){
                 save(merchandise);
+        }
+
+        public Merchandise findByParam(String goodsName,String origin){
+                Merchandise merchandise=new Merchandise();
+                String sql="select * from base_merchandise where goodsName=:goodsName or origin=:origin";
+                Query query=getSession().createSQLQuery(sql).addEntity(Merchandise.class);
+                query.setParameter("goodsName",goodsName);
+                query.setParameter("origin",origin);
+                Object object=query.uniqueResult();
+                if(null!=object) {
+                        merchandise = (Merchandise) object;
+                }return merchandise;
         }
 }

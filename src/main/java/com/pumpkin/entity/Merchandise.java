@@ -119,7 +119,7 @@ public class Merchandise implements Serializable{
         public void setPurchaseCount(Integer purchaseCount) {
                 this.purchaseCount = purchaseCount;
         }
-        @Column(name = "origin")
+        @Column(name = "[origin]")
         public String getOrigin() {
                 return origin;
         }
