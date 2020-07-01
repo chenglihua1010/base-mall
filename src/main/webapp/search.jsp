@@ -11,8 +11,8 @@
 <form method="post" action="merchandise/merchandiseInfor">
     <%--<form method="post" action="merchandiseInfor.jsp">--%>
     请输入商品的名字或生产地<br>
-    <input name="origin" type="text" >
-    <input name="goodsName" type="text" >
+    产地：<input name="origin" type="text"><br>
+    名称：<input name="goodsName" type="text">
     <input type="submit" value="搜索">
 </form>
 </body>
