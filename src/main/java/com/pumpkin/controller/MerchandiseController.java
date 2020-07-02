@@ -29,7 +29,8 @@ public class MerchandiseController {
                 ModelAndView modelAndView=new ModelAndView("merchandiseInfor");
                 String goodsName=request.getParameter("goodsName");
                 String origin=request.getParameter("origin");
-                Merchandise merchandise=merchandiseImpl.findByParam(goodsName,origin);
+                String searchKey=request.getParameter("searchKey");
+                Merchandise merchandise=merchandiseImpl.findByParam(searchKey,searchKey);
                 modelAndView.addObject("merchandise",merchandise);
                 return modelAndView;
 
