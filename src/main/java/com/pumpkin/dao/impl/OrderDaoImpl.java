@@ -35,20 +35,37 @@ public class OrderDaoImpl extends BaseDaoImpl<Order> implements OrderDao{
         }
 
         //订单销售排序
+//        public List<String> rankByCount() {
+//                List<Order> merchandiseList = new ArrayList<Order>();
+//                List<String> StringList = new ArrayList<String>();
+//                StringBuilder sql=new StringBuilder("SELECT goodsId FROM base_order GROUP BY goodsId ORDER BY SUM(count) DESC");
+//                Query query = getSession().createSQLQuery(sql.toString()).setResultTransformer(Transformers.ALIAS_TO_ENTITY_MAP);
+//                List list = query.list();
+//                if (null != list) {
+//                        //这个list用来拼接的
+//                        List<Map<String,String>> mapList=(List<Map<String,String>>)list;
+//                        for (Map<String,String> map:mapList) {
+//                                StringList.add(map.get("goodsId"));
+//                        }
+//                }
+//
+//                return StringList;
+//        }
+
+
+
+
+        //订单销售排序
         public List<String> rankByCount() {
                 List<Order> merchandiseList = new ArrayList<Order>();
                 List<String> StringList = new ArrayList<String>();
                 StringBuilder sql=new StringBuilder("SELECT goodsId FROM base_order GROUP BY goodsId ORDER BY SUM(count) DESC");
-                Query query = getSession().createSQLQuery(sql.toString()).setResultTransformer(Transformers.ALIAS_TO_ENTITY_MAP);
+                Query query = getSession().createSQLQuery(sql.toString());
                 List list = query.list();
                 if (null != list) {
                         //这个list用来拼接的
-                        List<Map<String,String>> mapList=(List<Map<String,String>>)list;
-                        for (Map<String,String> map:mapList) {
-                                StringList.add(map.get("goodsId"));
-                        }
+                        StringList=(List<String>)list;
                 }
-
                 return StringList;
         }
 }
