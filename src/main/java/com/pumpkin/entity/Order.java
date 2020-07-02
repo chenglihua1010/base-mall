@@ -65,7 +65,7 @@ public class Order implements Serializable{
         public void setGoodsName(String goodsName) {
                 this.goodsName = goodsName;
         }
-        @Column(name = "count")
+        @Column(name = "[count]")
         public Integer getCount() {
                 return count;
         }

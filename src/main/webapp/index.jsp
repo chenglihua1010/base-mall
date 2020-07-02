@@ -1119,12 +1119,12 @@
                                                                 <img src="image/catalog/demo/product/80/2.jpg" alt="Xancetta bresao">
                                                                 </a>
                                                     </div>
-                                                    
+
                                                 </div>
                                                 <div class="item-info">
                                                     <div class="item-title">
                                                         <a href="product.jsp" target="_self" title="Xancetta bresao">
-                                                                    Xancetta bresao 
+                                                                    Xancetta bresao
                                                                 </a>
                                                     </div>
                                                     <div class="rating">
@@ -1154,12 +1154,12 @@
                                                                     <img src="image/catalog/demo/product/80/3.jpg" alt="Sausage cowbee">
                                                                     </a>
                                                     </div>
-                                                   
+
                                                 </div>
                                                 <div class="item-info">
                                                     <div class="item-title">
                                                         <a href="product.jsp" target="_self" title="Sausage cowbee">
-                                                                    Sausage cowbee 
+                                                                    Sausage cowbee
                                                                 </a>
                                                     </div>
                                                     <div class="rating">
@@ -1169,10 +1169,10 @@
                                                         <span class="fa fa-stack"><i class="fa fa-star fa-stack-2x"></i></span>
                                                         <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-2x"></i></span>
                                                     </div>
-                                                   
+
                                                     <div class="content_price price">
                                                         <span class="price product-price">
-                                                                        $66.00 
+                                                                        $66.00
                                                                     </span>
                                                     </div>
                                                 </div>
@@ -1187,12 +1187,12 @@
                                                                         <img src="image/catalog/demo/product/80/4.jpg" alt="Chicken swinesha">
                                                                         </a>
                                                     </div>
-                                                   
+
                                                 </div>
                                                 <div class="item-info">
                                                     <div class="item-title">
                                                         <a href="#" target="_self" title="Chicken swinesha">
-                                                                    Chicken swinesha 
+                                                                    Chicken swinesha
                                                                 </a>
                                                     </div>
                                                     <div class="rating">
@@ -1234,12 +1234,12 @@
                                                         <img src="image/catalog/demo/product/80/5.jpg" alt="Qeserunt shortloin">
                                                         </a>
                                                     </div>
-                                                   
+
                                                 </div>
                                                 <div class="item-info">
                                                     <div class="item-title">
                                                         <a href="#" target="_self" title="Qeserunt shortloin">
-                                                Qeserunt shortloin 
+                                                Qeserunt shortloin
                                             </a>
                                                     </div>
                                                     <div class="rating">

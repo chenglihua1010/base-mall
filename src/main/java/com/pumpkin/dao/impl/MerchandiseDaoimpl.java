@@ -2,17 +2,22 @@ package com.pumpkin.dao.impl;
 
 import com.pumpkin.dao.MerchandiseDao;
 import com.pumpkin.entity.Merchandise;
+import com.pumpkin.entity.Order;
 import org.hibernate.criterion.DetachedCriteria;
 import org.hibernate.query.Query;
 import org.springframework.orm.hibernate5.HibernateTemplate;
 import org.springframework.stereotype.Repository;
+import org.springframework.util.CollectionUtils;
+import org.springframework.web.bind.annotation.RequestMapping;
 
+import javax.annotation.Resource;
 import java.util.ArrayList;
 import java.util.List;
 @Repository("merchandiseDaoimpl")
 public class MerchandiseDaoimpl  extends BaseDaoImpl<Merchandise> implements MerchandiseDao {
 
-
+        @Resource(name = "orderDaoImpl")
+        public OrderDaoImpl orderDaoImpl;
 
 //
 //        @Resource(name = "sessionFactory")
@@ -146,6 +151,10 @@ public class MerchandiseDaoimpl  extends BaseDaoImpl<Merchandise> implements Mer
         public Merchandise findByParam(String goodsName,String origin){
                 Merchandise merchandise=new Merchandise();
                 String sql="select * from base_merchandise where goodsName=:goodsName or origin=:origin";
+//                StringBuilder sql=new StringBuilder("select * from base_merchandise where goodsName=:goodsName");
+//                if(goodsName==null){
+//                        sql.append("origin=:origin");
+//                }
                 Query query=getSession().createSQLQuery(sql).addEntity(Merchandise.class);
                 query.setParameter("goodsName",goodsName);
                 query.setParameter("origin",origin);
@@ -154,4 +163,40 @@ public class MerchandiseDaoimpl  extends BaseDaoImpl<Merchandise> implements Mer
                         merchandise = (Merchandise) object;
                 }return merchandise;
         }
+
+
+
+
+
+
+        //订单销售排序
+        public List<Merchandise> rankByCount(){
+                List<Merchandise> merchandiseList=new ArrayList<Merchandise>();
+                List<Integer> integerList=new ArrayList<Integer>();
+//                StringBuilder sql=new StringBuilder("SELECT id FROM base_order GROUP BY goodsId ORDER BY SUM(count) DESC");
+//                StringBuilder sql=new StringBuilder("SELECT goodsId FROM base_order GROUP BY goodsId ORDER BY SUM(count) DESC");
+//                Query query=getSession().createSQLQuery(sql.toString()).addEntity(Order.class);
+//                List list=query.list();
+//
+//                if(null!=list){
+//                        //这个list用来拼接的
+//                        integerList=(List<Integer>)list;
+//                }
+                 List<Integer> intList=orderDaoImpl.rankByCount();
+
+                StringBuilder sql1=new StringBuilder("SELECT * from base_merchandise WHERE goodsId in (SELECT goodsId FROM base_order GROUP BY goodsId ) ORDER BY FIELD(goodsId ");
+                if(!CollectionUtils.isEmpty(integerList)){
+                        for (Integer goodsId:integerList) {
+                                sql1.append(","+goodsId);
+                        }
+                        sql1.append(")");
+                }
+                Query query1=getSession().createSQLQuery(sql1.toString()).addEntity(Merchandise.class);
+
+                List list1=query1.list();
+                if(null!=list1){
+                        merchandiseList=(List<Merchandise>)list1;
+                }return merchandiseList;
+        }
+
 }

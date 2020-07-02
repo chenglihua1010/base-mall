@@ -9,6 +9,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
+import java.util.List;
 
 @Controller
 @RequestMapping("/merchandise")
@@ -33,7 +34,15 @@ public class MerchandiseController {
                 Merchandise merchandise=merchandiseImpl.findByParam(searchKey,searchKey);
                 modelAndView.addObject("merchandise",merchandise);
                 return modelAndView;
-
-
         }
+
+        @RequestMapping("/rankByCount")
+        public Boolean rankByCount(){
+                List<Merchandise> merchandiseList=merchandiseImpl.rankByCount();
+                return true;
+        }
+
+
+
+
 }

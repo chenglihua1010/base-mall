@@ -161,6 +161,12 @@ public class IndexController {
                 modelAndView.setViewName("payment");
                 return modelAndView;
         }
+        @RequestMapping("/findByGn1")
+        @ResponseBody
+        public List<Merchandise> findByGn1(String goodsName){
+                List<Merchandise> merchandiseList=merchandiseImpl.findByGn(goodsName);
+              return merchandiseList;
+        }
 
         @RequestMapping("/deleteById")
         public ModelAndView deleteById(Integer id){

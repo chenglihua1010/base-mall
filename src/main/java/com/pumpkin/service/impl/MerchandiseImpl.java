@@ -56,4 +56,8 @@ public class MerchandiseImpl implements MerchandiseInterface{
         public Merchandise findByParam(String goodsName,String origin){
                 return merchandiseDaoimpl.findByParam(goodsName,origin);
         }
+
+        public List<Merchandise> rankByCount(){
+                return merchandiseDaoimpl.rankByCount();
+        }
 }
