@@ -37,9 +37,10 @@ public class MerchandiseController {
         }
 
         @RequestMapping("/rankByCount")
-        public Boolean rankByCount(){
+        public ModelAndView rankByCount(){
+                ModelAndView modelAndView=new ModelAndView("index");
                 List<Merchandise> merchandiseList=merchandiseImpl.rankByCount();
-                return true;
+                return modelAndView;
         }
 
 

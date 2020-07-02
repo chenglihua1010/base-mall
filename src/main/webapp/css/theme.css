@@ -7617,7 +7617,7 @@ footer a:hover {
  MODULE EXTRA SLIDER
  *************************************************************************************************/
 .main-left .so-extraslider .owl2-dots {
-  position: absolute;
+  /*position: absolute;*/
   top: 0;
   right: 0;
   min-width: 80px;
@@ -7646,7 +7646,7 @@ footer a:hover {
 .main-right .so-extraslider .extraslider-inner {
   margin: 0 0 4px 0; }
   .main-right .so-extraslider .owl2-dots {
-    position: absolute;
+    /*position: absolute;*/
     top: 0;
     right: 0;
     min-width: 80px;

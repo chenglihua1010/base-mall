@@ -129,8 +129,8 @@ public class UserController {
                         modelAndView.addObject("merchandiseList",merchandiseList);
 
                         //商品销售排行榜
-                        List<Merchandise> merchandiseListForRank=merchandiseImpl.rankByCount();
-                        modelAndView.addObject("merchandiseListForRank",merchandiseListForRank);
+                        List<Merchandise> merchandiseSaleList=merchandiseImpl.rankByCount();
+                        modelAndView.addObject("merchandiseSaleList",merchandiseSaleList);
 //                        modelAndView.addObject("merchandise0",merchandiseList.get(0));
 //                        modelAndView.addObject("merchandise1",merchandiseList.get(1));
 //                        modelAndView.addObject("merchandise2",merchandiseList.get(2));

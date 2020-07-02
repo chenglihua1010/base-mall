@@ -30,7 +30,7 @@ public class CommentController {
 
         @RequestMapping("/addComment")
         public ModelAndView addComment(HttpServletRequest request){
-                ModelAndView modelAndView=new ModelAndView();
+                ModelAndView modelAndView=new ModelAndView("index");
                 Comment comment=new Comment();
                 //不能new个新的对象，通过busId(唯一，共有的)找到对象，再更新(set-update)
 //                Order order=new Order();
@@ -63,6 +63,7 @@ public class CommentController {
                 comment.setType(typeCommentInt);
 
                 commentImpl.add(comment);
+
 
 
                 return modelAndView;
