@@ -182,17 +182,17 @@ public class MerchandiseDaoimpl  extends BaseDaoImpl<Merchandise> implements Mer
 //                        //这个list用来拼接的
 //                        integerList=(List<Integer>)list;
 //                }
-                 List<Integer> intList=orderDaoImpl.rankByCount();
-
+                 List<String> intList=orderDaoImpl.rankByCount();
                 StringBuilder sql1=new StringBuilder("SELECT * from base_merchandise WHERE goodsId in (SELECT goodsId FROM base_order GROUP BY goodsId ) ORDER BY FIELD(goodsId ");
-                if(!CollectionUtils.isEmpty(integerList)){
-                        for (Integer goodsId:integerList) {
+                if(!CollectionUtils.isEmpty(intList)){
+
+                        for (Object goodsId:intList){
                                 sql1.append(","+goodsId);
                         }
                         sql1.append(")");
                 }
-                Query query1=getSession().createSQLQuery(sql1.toString()).addEntity(Merchandise.class);
 
+                Query query1=getSession().createSQLQuery(sql1.toString()).addEntity(Merchandise.class);
                 List list1=query1.list();
                 if(null!=list1){
                         merchandiseList=(List<Merchandise>)list1;
