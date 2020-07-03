@@ -145,7 +145,7 @@ public class MerchandiseDaoimpl  extends BaseDaoImpl<Merchandise> implements Mer
         }
 
         public void updateMerchandie(Merchandise merchandise){
-                save(merchandise);
+                update(merchandise);
         }
 
         public Merchandise findByParam(String goodsName,String origin){

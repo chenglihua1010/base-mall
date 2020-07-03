@@ -13,7 +13,7 @@ public class Vip implements Serializable{
         private String acountId;
         private Integer viplevel;
         private Integer vipName;
-        private String discount;
+        private Double discount;
         private Integer duration;
         private Date createTime;
         private Date endTime;
@@ -53,11 +53,11 @@ public class Vip implements Serializable{
                 this.vipName = vipName;
         }
         @Column(name = "discount")
-        public String getDiscount() {
+        public Double getDiscount() {
                 return discount;
         }
 
-        public void setDiscount(String discount) {
+        public void setDiscount(Double discount) {
                 this.discount = discount;
         }
         @Column(name = "duration")

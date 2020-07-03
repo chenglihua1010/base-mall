@@ -2,8 +2,10 @@ package com.pumpkin.controller;
 
 import com.pumpkin.entity.Merchandise;
 import com.pumpkin.entity.Order;
+import com.pumpkin.entity.Vip;
 import com.pumpkin.service.impl.MerchandiseImpl;
 import com.pumpkin.service.impl.OrderImpl;
+import com.pumpkin.service.impl.VipImpl;
 import com.pumpkin.util.RandomUtil;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -20,7 +22,12 @@ public class OrderController {
 
         private OrderImpl orderImpl;
         private MerchandiseImpl merchandiseImpl;
+        private VipImpl vipImpl;
 
+        @Resource(name = "vipImpl")
+        public void setVipImpl(VipImpl vipImpl) {
+                this.vipImpl = vipImpl;
+        }
         @Resource(name = "merchandiseImpl")
         public void setMerchandiseImpl(MerchandiseImpl merchandiseImpl) {
                 this.merchandiseImpl = merchandiseImpl;
@@ -50,10 +57,11 @@ public class OrderController {
                 merchandiseList.get(0).setInventory(merchandiseList.get(0).getInventory()-countInt);
                 merchandiseImpl.updateMerchandise(merchandiseList.get(0));
 
-
-
-                Double allPrice=countInt*goodsPriceDouble;
                 String accountId=request.getParameter("accountId");
+                //更新结算方式
+                Vip vip=vipImpl.finDByAccountId(accountId);
+                Double discount=vip.getDiscount();
+                Double allPrice=countInt*goodsPriceDouble*discount/10;
                 String phone=request.getParameter("phone");
                 Integer phoneInteger=Integer.parseInt(phone);
                 String address=request.getParameter("address");
@@ -66,7 +74,6 @@ public class OrderController {
 //                Integer integralInt=Integer.parseInt(integral);
 
                 String size=request.getParameter("size");
-
                 Order order=new Order();
                 order.setGoodsName(goodsName);
                 order.setGoodsId(goodsId);

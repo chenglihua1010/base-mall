@@ -1,9 +1,11 @@
 package com.pumpkin.controller;
 
 import com.pumpkin.entity.Comment;
+import com.pumpkin.entity.Merchandise;
 import com.pumpkin.entity.Order;
 import com.pumpkin.entity.Transport;
 import com.pumpkin.service.impl.CommentImpl;
+import com.pumpkin.service.impl.MerchandiseImpl;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
@@ -11,12 +13,24 @@ import org.springframework.web.servlet.ModelAndView;
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import java.util.Date;
+import java.util.List;
 
 @Controller
 @RequestMapping("/comment")
 public class CommentController {
 
+//        @Resource(name = "indexController")
+//        private IndexController indexController;
+        @Resource(name = "userController")
+        private UserController userController;
+
+
         private CommentImpl commentImpl;
+        private MerchandiseImpl merchandiseImpl;
+        @Resource(name = "merchandiseImpl")
+        public void setMerchandiseImpl(MerchandiseImpl merchandiseImpl) {
+                this.merchandiseImpl = merchandiseImpl;
+        }
 
         public CommentImpl getCommentImpl() {
                 return commentImpl;
@@ -30,7 +44,9 @@ public class CommentController {
 
         @RequestMapping("/addComment")
         public ModelAndView addComment(HttpServletRequest request){
+
                 ModelAndView modelAndView=new ModelAndView("index");
+
                 Comment comment=new Comment();
                 //不能new个新的对象，通过busId(唯一，共有的)找到对象，再更新(set-update)
 //                Order order=new Order();
@@ -53,6 +69,10 @@ public class CommentController {
                 String typeComment=request.getParameter("typeComment");
                 Integer typeCommentInt=Integer.parseInt(typeComment);
 
+                //更新商品评论数
+                List<Merchandise> merchandiseList=merchandiseImpl.findByGn(goodsName);
+                merchandiseList.get(0).setEvacount(merchandiseList.get(0).getEvacount()+1);
+
                 comment.setBusId(busId);
                 comment.setAccountId(accountId);
                 comment.setCommentText(commentText);
@@ -64,9 +84,8 @@ public class CommentController {
 
                 commentImpl.add(comment);
 
-
-
                 return modelAndView;
+//                return userController.toLogin();
         }
 
         //更新success.jsp

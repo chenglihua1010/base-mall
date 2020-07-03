@@ -120,24 +120,16 @@ public class UserController {
                 String accountId=request.getParameter("accountId");
                 String password=request.getParameter("password");
                 User user=this.getUserByAccountIDAndPsw(accountId,password);
-                if(null==user){
-                        modelAndView.setViewName("error");
-                }else{
-                        modelAndView.setViewName("index");
+               modelAndView.setViewName("index");
+                if(null!=user) {
                         modelAndView.addObject("user",user);
+
+                }
                         List<Merchandise> merchandiseList= merchandiseImpl.findAllpumpkin();
                         modelAndView.addObject("merchandiseList",merchandiseList);
-
                         //商品销售排行榜
                         List<Merchandise> merchandiseSaleList=merchandiseImpl.rankByCount();
                         modelAndView.addObject("merchandiseSaleList",merchandiseSaleList);
-//                        modelAndView.addObject("merchandise0",merchandiseList.get(0));
-//                        modelAndView.addObject("merchandise1",merchandiseList.get(1));
-//                        modelAndView.addObject("merchandise2",merchandiseList.get(2));
-//                        modelAndView.addObject("merchandise3",merchandiseList.get(3));
-//                        modelAndView.addObject("merchandise4",merchandiseList.get(4));
-                }
-
                 return modelAndView;
         }
 

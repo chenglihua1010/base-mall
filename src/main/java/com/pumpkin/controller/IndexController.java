@@ -5,6 +5,7 @@ import com.pumpkin.entity.Order;
 import com.pumpkin.entity.User;
 import com.pumpkin.service.impl.MerchandiseImpl;
 import com.pumpkin.service.impl.UserImpl;
+import com.pumpkin.util.RandomUtil;
 import org.hibernate.query.Query;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Controller;
@@ -175,25 +176,52 @@ public class IndexController {
                 modelAndView.setViewName("payment");
                 return modelAndView;
         }
-         @RequestMapping("/add")
-         public ModelAndView add(){
-                 Merchandise merchandise=new Merchandise();
+//         @RequestMapping("/add")
+//         public ModelAndView add(){
+//                 Merchandise merchandise=new Merchandise();
+//
+//                 merchandise.setGoodsName("南瓜11号");
+//                 merchandise.setDescribe("sssssss");
+//                 merchandise.setGoodsId("nangua10");
+//                 merchandise.setEvacount(11);
+//                 merchandise.setImgs("dfsfs");
+//                 merchandise.setOrigin("sfsfs");
+//                 merchandise.setPurchaseCount(3434);
+//                 merchandise.setInventory(3434);
+//
+//                 merchandiseImpl.add(merchandise);
+//
+//                 ModelAndView modelAndView=new ModelAndView();
+//                 modelAndView.addObject("merchandiseList",merchandise.getGoodsName());
+//                 modelAndView.setViewName("blank");
+//                 return modelAndView;
+//         }
 
-                 merchandise.setGoodsName("南瓜11号");
-                 merchandise.setDescribe("sssssss");
-                 merchandise.setGoodsId("nangua10");
-                 merchandise.setEvacount(11);
-                 merchandise.setImgs("dfsfs");
-                 merchandise.setOrigin("sfsfs");
-                 merchandise.setPurchaseCount(3434);
-                 merchandise.setInventory(3434);
 
-                 merchandiseImpl.add(merchandise);
 
-                 ModelAndView modelAndView=new ModelAndView();
-                 modelAndView.addObject("merchandiseList",merchandise.getGoodsName());
-                 modelAndView.setViewName("blank");
-                 return modelAndView;
-         }
+        //测试索引查询，无限增加数据
+//        @RequestMapping("/add")
+//        public void add(){
+////                Merchandise merchandise;
+//                new Thread(new Runnable() {
+//                        public void run() {
+//                                Merchandise merchandise;
+//                                while (true){
+//                                         merchandise=new Merchandise();
+//                                        merchandise.setGoodsName("南瓜"+RandomUtil.getRandomNickname(2)+"号");
+//                                        merchandise.setDescribe("sssssss");
+//                                        merchandise.setGoodsId(RandomUtil.getRandomNickname(10));
+//                                        merchandise.setEvacount(11);
+//                                        merchandise.setImgs("dfsfs");
+//                                        merchandise.setOrigin("sfsfs");
+//                                        merchandise.setPurchaseCount(3434);
+//                                        merchandise.setInventory(3434);
+//                                        merchandiseImpl.add(merchandise);
+//                                }
+//
+//                        }
+//                }).start();;
 
-}
+
+        }
+//}
