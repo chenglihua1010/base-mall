@@ -9,7 +9,7 @@
 <base href="<%=basePath%>">
 <html lang="en">
 <head>
-    
+    <meta name="referrer" content="no-referrer" />
     <!-- Basic page needs
     ============================================ -->
     <title></title>
