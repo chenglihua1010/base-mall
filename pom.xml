@@ -185,6 +185,12 @@
             <version>4.3.9.RELEASE</version>
         </dependency>
 
+        <dependency>
+            <groupId>org.aspectj</groupId>
+            <artifactId>aspectjweaver</artifactId>
+            <version>1.8.14</version>
+        </dependency>
+
     </dependencies>
     <build>
         <finalName>base-mall</finalName>
